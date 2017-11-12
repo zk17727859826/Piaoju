@@ -1,0 +1,52 @@
+﻿@model IEnumerable<jiax.Model.Txueyuan>
+@{
+    ViewBag.Title = "xueyuanlist";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                学员付款记录
+            </h1>
+        </div>
+    </div>
+    <form class="form-inline" role="form" action="@Url.Action("xueyuanlist", "Affice")">
+        <div class="form-group">
+            <label class="sr-only" for="name">姓名</label>
+            <input type="text" class="form-control" id="startdate" name="xingming" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">学员号</label>
+            <input type="text" class="form-control" id="enddate" name="xueyh" placeholder="请输入学员号">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">身份号码</label>
+            <input type="text" class="form-control" id="enddate" name="shenfhm" placeholder="请输入身份号码">
+        </div>
+        <input type="submit" class="form-control" value="查 询" />
+    </form>
+    <div style="height:10px;"></div>
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">学员号</th>
+            <th class="text-center">姓名</th>
+            <th class="text-center">性别</th>
+            <th class="text-center">身份号码</th>
+            <th class="text-center">帐务明细</th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@item.Xueyh</td>
+                    <td class="text-center">@item.Xingming</td>
+                    <td class="text-center">@item.Xingbie_sm</td>
+                    <td class="text-center">@item.Shenfhm</td>
+                    <td class="text-center"><a href="/Affice/XueyuanDetails/@item.Xueyh">账务明细</a></td>
+                </tr>
+            }
+        }
+    </table>
+</div>

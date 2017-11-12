@@ -1,0 +1,52 @@
+﻿@model IEnumerable<piaoju.Model.Tdetails>
+@{
+    ViewBag.Title = "XueyuanDetails";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                学员付款记录
+            </h1>
+        </div>
+    </div>
+    <form class="form-inline" role="form" action="@Url.Action("accept", "Affice")">
+        <table class="table table-no-bordered">
+            <tr>
+                <td>@ViewBag.xingming</td>
+                <td>@ViewBag.xingbie</td>
+                <td>@ViewBag.shenfhm</td>
+                <td>@ViewBag.xueyh</td>
+                <td><a href="/Affice/accept/@ViewBag.xueyh" class="form-control">缴 费</a></td>
+            </tr>
+        </table>
+    </form>
+    <div style="height:10px;"></div>
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">单据号</th>
+            <th class="text-center">缴款单位/个人</th>
+            <th class="text-center">项目</th>
+            <th class="text-center">缴款方式</th>
+            <th class="text-center">缴款金额</th>
+            <th class="text-center">缴款日期</th>
+            <th class="text-center">操作员</th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@item.bianm</td>
+                    <td class="text-center">@item.man</td>
+                    <td class="text-center">@item.type</td>
+                    <td class="text-center">@item.shoukfs</td>
+                    <td class="text-center">@item.money.ToString("#.00")</td>
+                    <td class="text-center">@item.Kaipri.ToString("yyyy/MM/dd HH:mm:ss")</td>
+                    <td class="text-center">@item.operator_name</td>
+                </tr>
+            }
+        }
+    </table>
+</div>

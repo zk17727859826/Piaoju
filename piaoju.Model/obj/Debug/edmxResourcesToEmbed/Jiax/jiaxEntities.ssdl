@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jiaxEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Txueyuan">
+    <Key>
+      <PropertyRef Name="Xuey_ID" />
+    </Key>
+    <Property Name="Xuey_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Xingming" Type="varchar" MaxLength="20" />
+    <Property Name="Xingbie" Type="char" MaxLength="1" />
+    <Property Name="Chusrq" Type="datetime" />
+    <Property Name="Zhengjzl" Type="varchar" MaxLength="3" />
+    <Property Name="Shenfhm" Type="varchar" MaxLength="30" />
+    <Property Name="Zanzzhm" Type="varchar" MaxLength="30" />
+    <Property Name="Zhaop" Type="varchar" MaxLength="200" />
+    <Property Name="Diqu" Type="varchar" MaxLength="6" />
+    <Property Name="Lianxdz" Type="varchar" MaxLength="200" />
+    <Property Name="Zhusdz" Type="varchar" MaxLength="200" />
+    <Property Name="Dianh" Type="varchar" MaxLength="50" />
+    <Property Name="Youzbm" Type="varchar" MaxLength="20" />
+    <Property Name="Shenqzl" Type="varchar" MaxLength="3" />
+    <Property Name="Xianzcx" Type="varchar" MaxLength="3" />
+    <Property Name="Shenqcx" Type="varchar" MaxLength="3" />
+    <Property Name="Tijian" Type="varchar" MaxLength="3" />
+    <Property Name="Riqi" Type="datetime" />
+    <Property Name="ZhiwenA" Type="varchar" MaxLength="1024" />
+    <Property Name="ZhiwenB" Type="varchar" MaxLength="1024" />
+    <Property Name="Danganbh" Type="varchar" MaxLength="30" />
+    <Property Name="Xuey_Ic" Type="varchar" MaxLength="30" />
+    <Property Name="Mima" Type="varchar" MaxLength="30" />
+    <Property Name="Xueyh" Type="varchar" MaxLength="30" />
+    <Property Name="Xuexzt" Type="varchar" MaxLength="3" />
+    <Property Name="Shenhzt" Type="char" MaxLength="1" />
+    <Property Name="Qici" Type="varchar" MaxLength="20" />
+    <Property Name="Kaibrq" Type="datetime" />
+    <Property Name="Yungqc" Type="varchar" MaxLength="20" />
+    <Property Name="Xueyz" Type="varchar" MaxLength="50" />
+    <Property Name="Jieyz" Type="varchar" MaxLength="50" />
+    <Property Name="Baom_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Jiax" Type="varchar" MaxLength="50" />
+    <Property Name="Jianl" Type="varchar" MaxLength="200" />
+    <Property Name="Xingbie_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Zhengjzl_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Diqu_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Shenqzl_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Xianzcx_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Shenqcx_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Tijian_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Shenhzt_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Xuexzt_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Jiax_sm" Type="varchar" MaxLength="50" />
+    <Property Name="Zwapic" Type="varchar" MaxLength="200" />
+    <Property Name="Zwbpic" Type="varchar" MaxLength="200" />
+    <Property Name="jieyrq" Type="datetime" />
+    <Property Name="Tuixrq" Type="datetime" />
+    <Property Name="Jinengzmbh" Type="varchar" MaxLength="30" />
+    <Property Name="Jinengzmrq" Type="datetime" />
+    <Property Name="Guddh" Type="varchar" MaxLength="50" />
+    <Property Name="Baomd" Type="varchar" MaxLength="3" />
+    <Property Name="Jiaxmc" Type="varchar" MaxLength="100" />
+    <Property Name="Jiesr" Type="varchar" MaxLength="50" />
+    <Property Name="Weisjhrq" Type="datetime" />
+    <Property Name="ycode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tzidian">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Zidxh" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Zidxh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shuom" Type="varchar" MaxLength="50" />
+    <Property Name="Beiz" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tzidianlst">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Shuom" Type="varchar" MaxLength="50" />
+    <Property Name="Beiz" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="jiaxEntitiesStoreContainer">
+    <EntitySet Name="Txueyuan" EntityType="Self.Txueyuan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tzidian" EntityType="Self.Tzidian" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tzidianlst" EntityType="Self.Tzidianlst" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

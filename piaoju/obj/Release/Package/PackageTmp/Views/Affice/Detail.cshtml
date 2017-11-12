@@ -1,0 +1,166 @@
+﻿@model piaoju.Model.Tdetails
+@{
+    ViewBag.Title = "票据详情";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+
+@section header{
+    <style>
+        .table td {
+            vertical-align: middle !important;
+            border-width: 3px !important;
+        }
+
+        
+    </style>
+
+    <style type="text/css" media="print">
+        .noprint {
+            visibility: hidden;
+        }
+        .printFrame{
+            position:fixed;
+            top:0px;
+            left:0px;
+            margin-left:1.25cm;
+            margin-right:1.25cm;
+        }
+    </style>
+}
+<div class="printFrame container-fluid" style="width:16cm;">
+    @*   <div class="container-fluid" style="width:600px; height:3.31cm;">*@
+    <div id="page1" style="position:relative;">
+        <div class="text-center">
+            <h4>东海县中天驾驶员培训有限公司</h4>
+        </div>
+        <div class="text-center">
+            <h4>收 款 收 据</h4>
+        </div>
+        <div class="text-right">
+            <h5>No.@(Model == null ? "" : Model.bianm)</h5>
+            <input type="hidden" id="bianma" value="@(Model == null ? "" : Model.bianm)" />
+        </div>
+        <div style="position:absolute; top:1px; left:1px;">
+            <img src="/Affice/QRCode/@(Model == null ? "" : Model.bianm)" />
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <tr>
+                    <td class="text-center" style="width:110px;">报名/缴费点</td>
+                    <td style="width:100px;">
+                        @(Model == null ? "" : Model.baomd)
+                    </td>
+                    <td class="text-center" style="width:80px;">学员号</td>
+                    <td style="width:100px;">
+                        @(Model == null ? "" : Model.xueyh)
+                    </td>
+                    <td class="text-center" style="width:80px;">填开日期</td>
+                    <td>@(Model == null ? "" : Model.Kaipri.ToString("yyyy年MM月dd日"))</td>
+                </tr>
+                <tr>
+                    <td style="height:40px;" class="text-center">缴款单位或个人</td>
+                    <td colspan="5">
+                        @(Model == null ? "" : Model.man)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="height: 40px;">款项内容</td>
+                    <td colspan="3">
+                        @(Model == null ? "" : Model.type)
+                    </td>
+                    <td class="text-center">收款方式</td>
+                    <td>
+                        @(Model == null ? "" : Model.shoukfs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="height: 30px;">人民币(大写)</td>
+                    <td colspan="3">
+                        @(Model == null ? "" : Model.moneyUpper)
+                    </td>
+                    <td class="text-center">金额(￥)</td>
+                    <td>
+                        @(Model == null ? "" : Model.money.ToString("#.##"))
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="height:60px; vertical-align:middle">收款单<br />位盖章</td>
+                    <td></td>
+                    <td class="text-center" style="vertical-align:middle">收款人<br />签章</td>
+                    <td class="text-center">
+                        @(Model == null ? "" : Model.operator_name)
+                    </td>
+                    <td class="text-center" style="vertical-align:middle">备注</td>
+                    <td>
+                        @(Model == null ? "" : Model.memo)
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="text-center noprint" style="">
+        @if (ViewBag.Back == "accept")
+        {
+            <a class="btn btn-primary" href="/Affice/accept">返 回</a>
+        }
+        else
+        {
+            <input type="button" class="btn btn-primary" id="btnback" onclick="window.history.go(-1);" value="返 回" />
+        }
+        <input type="button" class="btn btn-primary" id="btnprint" onclick="preprint();" value="打印预览" />
+        <input type="button" class="btn btn-primary" id="btnprint" onclick="doPrint(true);" value="选择打印" />
+        <input type="button" class="btn btn-primary" id="btnprint" onclick="doPrint(false);" value="直接打印" />
+    </div>
+</div>
+<object id="DLPrinter" classid="CLSID:5C230622-45E5-4e3c-893C-3BFDDC4DB5E4" codebase="DLPrinter.cab" height="0" width="0"></object>
+<object id="jatoolsPrinter" classid="CLSID:B43D3361-D075-4BE2-87FE-057188254255" codebase="jatoolsPrinter.cab#version=8,6,0,0"></object> 
+@*<object id="ojatoolsPrinter" classid="CLSID:B43D3361-D075-4BE2-87FE-057188254255" codebase="/jatoolsPrinter.cab#version=8,6,0,0"></object>*@
+@section script{
+    <script src="@Url.Content("~/Resource/javascript/jquery.jqprint-0.3.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/jquery-migrate-1.2.1.min.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/jatoolsPrinter.js")"></script>
+    <script type="text/javascript">
+
+        function preprint() {
+            myDoc = {
+                documents: document,
+                /*
+                 要打印的div 对象在本文档中，控件将从本文档中的 id 为 'page1' 的div对象，
+                 作为首页打印id 为'page2'的作为第二页打印            */
+                copyrights: '杰创软件拥有版权  www.jatools.com' // 版权声明,必须   
+            };
+            jatoolsPrinter.printPreview(myDoc)
+        }
+
+        function doPrint(bol) {
+            myDoc = {
+                documents: document,
+                /*
+                 要打印的div 对象在本文档中，控件将从本文档中的 id 为 'page1' 的div对象，
+                 作为首页打印id 为'page2'的作为第二页打印            */
+                copyrights: '杰创软件拥有版权  www.jatools.com' // 版权声明,必须   
+            };
+            document.getElementById("jatoolsPrinter").print(myDoc, bol); // 直接打印，不弹出打印机设置对话框 
+        }
+
+        function jqueryPrint(type) {
+            DLPrinter.MarginLeft = 15;
+            DLPrinter.MarginRight = 15;
+            DLPrinter.MarginTop = 0;
+            DLPrinter.MarginBottom = 10;
+            DLPrinter.PageHeader = "";
+            DLPrinter.PageFooter = "";
+            DLPrinter.CopyCount = 1;
+            //$("#page1").jqprint();
+            if (type == 1) {
+                DLPrinter.PrintPreview();
+            }
+            else if (type == 2) {
+                DLPrinter.Print();
+            }
+            else if (type == 3) {
+                DLPrinter.PrintDirect();
+            }
+        }
+    </script>
+}

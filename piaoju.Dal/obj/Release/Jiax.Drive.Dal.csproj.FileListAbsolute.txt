@@ -1,0 +1,14 @@
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\Jiax.Drive.Dal.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\Jiax.Drive.Dal.pdb
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\EntityFramework.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\Jiax.Drive.Model.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\tg.Helper.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\ChnCharInfo.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\tg.Helper.pdb
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\Jiax.Drive.Model.pdb
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\EntityFramework.xml
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\ChnCharInfo.xml
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\bin\Release\zh-CN\ChnCharInfo.resources.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\obj\Release\Jiax.Drive.Dal.csprojResolveAssemblyReference.cache
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\obj\Release\Jiax.Drive.Dal.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Dal\obj\Release\Jiax.Drive.Dal.pdb

@@ -1,0 +1,8 @@
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\bin\Release\Jiax.Drive.Model.dll.config
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\bin\Release\Jiax.Drive.Model.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\bin\Release\Jiax.Drive.Model.pdb
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\bin\Release\EntityFramework.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\bin\Release\EntityFramework.xml
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\obj\Release\Jiax.Drive.Model.csprojResolveAssemblyReference.cache
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\obj\Release\Jiax.Drive.Model.dll
+E:\系统源码\VS2013\jiax_drive_affice\Jiax.Drive.Model\obj\Release\Jiax.Drive.Model.pdb

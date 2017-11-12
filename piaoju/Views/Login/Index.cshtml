@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "用户登陆";
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+@section header{
+    <link href="@Url.Content("~/Resource/css/login.css")" rel="stylesheet" type="text/css" />
+}
+<div class="container">
+    <div class="login-box">
+        <div class="login-header">
+            <h4>中天驾校收费管理系统</h4>
+            <h4>用户登陆</h4>
+        </div>
+        <div class="login-form">
+            <form role="form">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>&nbsp;</span>
+                    <input class="form-control" id="username" type="text" placeholder="用户名称">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;</span>
+                    <input class="form-control" id="password" type="password" placeholder="用户密码">
+                </div>
+                <div class="row hidden">
+                    <div class="col-sm-12 remember-me">
+                        <label class="checkbox"><input type="checkbox"> Remember me</label>
+                    </div>
+                </div>
+                <div style="height:20px;"></div>
+                <div class="row">
+                    <div class="col-sm-12 cta">
+                        <span type="button" class="btn btn-primary btn-large" data-loading-text="登陆中..."><span class="glyphicon glyphicon-log-in"></span><span class="text">登陆</span></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section script{
+    <script src="@Url.Content("~/Resource/JavaScript/login.js")"></script>
+}

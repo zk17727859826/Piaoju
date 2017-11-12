@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "交费记录";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+@section header{
+    <style>
+        .form-control{
+            margin-bottom:3px !important;
+        }
+    </style>
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                操作员收费记录
+            </h1>
+        </div>
+    </div>
+    <form class="form-inline" role="form" action="@Url.Action("Index")">
+        <div class="form-group">
+            <label class="sr-only" for="name">开始日期</label>
+            <input type="text" class="form-control" id="startdate" onfocus="WdatePicker();" name="userno" placeholder="请输入开始日期">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">结束日期</label>
+            <input type="text" class="form-control" id="enddate" onfocus="WdatePicker();" name="username" placeholder="请输入结束日期">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">款项</label>
+            @Html.Action("paytype", "Common", new { classname = "form-control", id = "type" })
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">操作员</label>
+            @Html.Action("Operator", "Common", new { classname = "form-control", id = "oper" })
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">交款人/单位</label>
+            <input type="text" class="form-control" id="man" name="man" placeholder="请输入交款人/单位">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">单据号</label>
+            <input type="text" class="form-control" id="bianm" name="bianm" placeholder="请输入单据号">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">学员号</label>
+            <input type="text" class="form-control" id="xueyh" name="xueyh" placeholder="请输入学员号">
+        </div>
+        <input type="button" class="btn btn-default" id="btnQuery" value="查询" />
+    </form>
+    <div style="height:10px;"></div>
+    <table class="table table-bordered" id="feetable">
+        <thead>
+            <tr>
+                <th style="text-align:center;" data-config="field:'bianm',width:'150',align:'center',formatter:showDetailsButton">单据号</th>
+                <th style="text-align:center;" data-config="field:'operator_name'">收款员</th>
+                <th style="text-align:left;" data-config="field:'man'">缴款人</th>
+                <th style="text-align:center;" data-config="field:'baomd',align:'center'">报名点</th>
+                <th style="text-align:left;" data-config="field:'type'">款项内容</th>
+                <th style="text-align:right;" data-config="field:'money',width:'50',align:'right'">金额</th>
+            </tr>
+        </thead>
+        <tbody id="userbody"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6"></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+@section script{
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table.js")"></script>
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.js")"></script>
+    <script src="@Url.Content("~/Resource/My97DatePicker/WdatePicker.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/paylist.js?v=" + ViewBag.ScriptVer)"></script>
+}

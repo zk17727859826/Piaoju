@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="detailsModelStoreContainer" CdmEntityContainer="detailsEntities">
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="detailsModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tjournals">
+      <EntityTypeMapping TypeName="detailsModel.Tjournals">
+        <MappingFragment StoreEntitySet="Tjournals">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="operator_name" ColumnName="operator_name" />
+          <ScalarProperty Name="riqi" ColumnName="riqi" />
+          <ScalarProperty Name="thing" ColumnName="thing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Toperator">
+      <EntityTypeMapping TypeName="detailsModel.Toperator">
+        <MappingFragment StoreEntitySet="Toperator">
+          <ScalarProperty Name="bianm" ColumnName="bianm" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="xingming" ColumnName="xingming" />
+          <ScalarProperty Name="xingbie" ColumnName="xingbie" />
+          <ScalarProperty Name="power" ColumnName="power" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Txueyuan">
+      <EntityTypeMapping TypeName="detailsModel.Txueyuan">
+        <MappingFragment StoreEntitySet="Txueyuan">
+          <ScalarProperty Name="xueyh" ColumnName="xueyh" />
+          <ScalarProperty Name="xingming" ColumnName="xingming" />
+          <ScalarProperty Name="xingbie" ColumnName="xingbie" />
+          <ScalarProperty Name="shenfhm" ColumnName="shenfhm" />
+          <ScalarProperty Name="baomd" ColumnName="baomd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbianma">
+      <EntityTypeMapping TypeName="detailsModel.Tbianma">
+        <MappingFragment StoreEntitySet="Tbianma">
+          <ScalarProperty Name="bianmaBased" ColumnName="bianmaBased" />
+          <ScalarProperty Name="riqi" ColumnName="riqi" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tzhidian">
+      <EntityTypeMapping TypeName="detailsModel.Tzhidian">
+        <MappingFragment StoreEntitySet="Tzhidian">
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tzhidian1">
+      <EntityTypeMapping TypeName="detailsModel.Tzhidian1">
+        <MappingFragment StoreEntitySet="Tzhidian1">
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="upid" ColumnName="upid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tdetails">
+      <EntityTypeMapping TypeName="detailsModel.Tdetails">
+        <MappingFragment StoreEntitySet="Tdetails">
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="operator_name" ColumnName="operator_name" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="riqi" ColumnName="riqi" />
+          <ScalarProperty Name="Kaipri" ColumnName="Kaipri" />
+          <ScalarProperty Name="moneyUpper" ColumnName="moneyUpper" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="shoukfs" ColumnName="shoukfs" />
+          <ScalarProperty Name="man" ColumnName="man" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="baomd" ColumnName="baomd" />
+          <ScalarProperty Name="xueyh" ColumnName="xueyh" />
+          <ScalarProperty Name="bianm" ColumnName="bianm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,14 @@
+E:\系统源码\VS2013\piaoju\piaoju.Dal\obj\Debug\piaoju.Dal.csprojResolveAssemblyReference.cache
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\piaoju.Dal.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\piaoju.Dal.pdb
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\EntityFramework.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\piaoju.Model.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\tg.Helper.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\ChnCharInfo.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\tg.Helper.pdb
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\piaoju.Model.pdb
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\EntityFramework.xml
+E:\系统源码\VS2013\piaoju\piaoju.Dal\obj\Debug\piaoju.Dal.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\obj\Debug\piaoju.Dal.pdb
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\jiax.Model.dll
+E:\系统源码\VS2013\piaoju\piaoju.Dal\bin\Debug\jiax.Model.pdb

@@ -1,0 +1,52 @@
+﻿@model piaoju.Model.Tzhidian1
+@{
+    ViewBag.Title = "添加字典";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                @ViewBag.ZdContent
+            </h1>
+        </div>
+    </div>
+    <form class="form-horizontal" role="form" method="post" action="@(string.IsNullOrEmpty(ViewBag.ID) ? "/Affice/AddZidian1" : "/Affice/UpdateZidian1")">
+        <div class="form-group" style="display:none;">
+            <label for="firstname" class="col-sm-2 control-label">上级字典</label>
+            <div class="col-sm-9">
+                <div class="form-control">@ViewBag.ZdContent</div>
+                <input type="hidden" name="upid" id="upid" value="@ViewBag.UPID" />
+                <input type="hidden" name="id" id="id" value="@ViewBag.ID" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastname" class="col-sm-2 control-label">子内容</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="content" name="content" value="@(Model == null ? "" : Model.content)" placeholder="请输入子内容">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastname" class="col-sm-2 control-label">子备注</label>
+            <div class="col-sm-9 dropdown" id="storefield">
+                <input type="text" class="form-control" id="memo" name="memo" value="@(Model == null ? "" : Model.memo)" placeholder="请输入子备注">
+            </div>
+        </div>
+    </form>
+    <div class=" text-center">
+        <a class="btn btn-primary btn-op" onclick="window.history.go(-1)" href="/Affice/Zidian1/@ViewBag.UPID">返回</a>
+        <input type="submit" id="btnCommit" class="btn btn-primary btn-op" data-optype="@(string.IsNullOrEmpty(ViewBag.ID)?"add":"update")" value="提交" />
+    </div>
+</div>
+
+@section script{
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/zd.js?v=" + ViewBag.ScriptVer)"></script>
+    <script>
+        $(document).ready(function () {
+            initAdd();
+        });
+    </script>
+}

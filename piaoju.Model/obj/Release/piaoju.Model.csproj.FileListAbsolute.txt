@@ -1,0 +1,8 @@
+E:\系统源码\VS2013\piaoju\piaoju.Model\bin\Release\piaoju.Model.dll.config
+E:\系统源码\VS2013\piaoju\piaoju.Model\bin\Release\piaoju.Model.dll
+E:\系统源码\VS2013\piaoju\piaoju.Model\bin\Release\piaoju.Model.pdb
+E:\系统源码\VS2013\piaoju\piaoju.Model\bin\Release\EntityFramework.dll
+E:\系统源码\VS2013\piaoju\piaoju.Model\bin\Release\EntityFramework.xml
+E:\系统源码\VS2013\piaoju\piaoju.Model\obj\Release\piaoju.Model.csprojResolveAssemblyReference.cache
+E:\系统源码\VS2013\piaoju\piaoju.Model\obj\Release\piaoju.Model.dll
+E:\系统源码\VS2013\piaoju\piaoju.Model\obj\Release\piaoju.Model.pdb

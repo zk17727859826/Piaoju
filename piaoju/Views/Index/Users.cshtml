@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "用户管理";
+    Layout = "~/Views/Share/_System.cshtml";
+}
+@section header{
+    <link href="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table.css")" rel="stylesheet" />
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                用户管理(说明：“S"：拥有所有权限，"A"：只有查看和收费的权限，"B"：只有查看收费记录的权限)
+            </h1>
+        </div>
+    </div>
+    <form class="form-inline" role="form" action="@Url.Action("Index")">
+        <div class="form-group">
+            <label class="sr-only" for="name">用户代码</label>
+            <input type="text" class="form-control" id="search_no" name="userno" placeholder="请输入用户代码">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">用户名称</label>
+            <input type="text" class="form-control" id="search_name" name="username" placeholder="请输入用户名称">
+        </div>
+        <input type="button" class="btn btn-default" id="btnQuery" value="查询" />
+        <input type="button" class="btn btn-default" id="btnShowAdd" value="新增" data-toggle="modal" data-target="#alertwindow" />
+    </form>
+    <div style="height:10px;"></div>
+    <table class="table table-bordered" id="usertable">
+        <thead>
+            <tr>
+                <th data-config="field:'bianm'">用户代码</th>
+                <th data-config="field:'xingming'">姓名</th>
+                <th style="text-align:center;" data-config="field:'xingbie',width:'50',align:'center'">性别</th>
+                <th style="text-align:center;" data-config="field:'power',width:'50',align:'center'">权限</th>
+                <th style="text-align:center;" data-config="field:'bianm',width:'50',align:'center',formatter:showEditButton">编辑</th>
+                <th style="text-align:center;" data-config="field:'bianm',width:'50',align:'center',formatter:showDeleteButton">删除</th>
+            </tr>
+        </thead>
+        <tbody id="userbody"></tbody>
+    </table>
+</div>
+
+<div id="alertwindow" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h3 class="modal-title" id="myModalLabel">
+                    <span id="actiontype">添加</span>用户
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-3 control-label">用户代码</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="bianm" placeholder="用户代码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-3 control-label">用户姓名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="xingming" placeholder="用户姓名">
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-3 control-label">性别</label>
+                            <div class="col-sm-9">
+                                <label class="checkbox-inline" style="padding-left:0px;">
+                                    <input type="radio" name="sex" id="optionsRadios3" value="男"> 男
+                                </label>
+                                <label class="checkbox-inline" style="padding-left:0px;">
+                                    <input type="radio" name="sex" id="optionsRadios4" value="女"> 女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-3 control-label">权限</label>
+                            <div class="col-sm-9">
+                                <label class="checkbox-inline" style="padding-left:0px;">
+                                    <input type="radio" name="power" id="optionsRadios5" value="S"> S
+                                </label>
+                                <label class="checkbox-inline" style="padding-left:0px;">
+                                    <input type="radio" name="power" id="optionsRadios6" value="A"> A
+                                </label>
+                                <label class="checkbox-inline" style="padding-left:0px;">
+                                    <input type="radio" name="power" id="optionsRadios7" value="B"> B
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" id="btnCommit" class="btn btn-primary btn-op" value="提交" />
+                    <input type="button" id="btnCancel" class="btn btn-default btn-op" value="取消" data-dismiss="modal" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section script{
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table.js")"></script>
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/user.js?v=" + ViewBag.ScriptVer)"></script>
+}

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="jiax_carfinanceModelStoreContainer" CdmEntityContainer="jiax_carfinanceEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysmenu">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysmenu">
+        <MappingFragment StoreEntitySet="sysmenu">
+          <ScalarProperty Name="menuno" ColumnName="menuno" />
+          <ScalarProperty Name="menuname" ColumnName="menuname" />
+          <ScalarProperty Name="isvalid" ColumnName="isvalid" />
+          <ScalarProperty Name="menuurl" ColumnName="menuurl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysparam">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysparam">
+        <MappingFragment StoreEntitySet="sysparam">
+          <ScalarProperty Name="paramno" ColumnName="paramno" />
+          <ScalarProperty Name="paramname" ColumnName="paramname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysparam_children">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysparam_children">
+        <MappingFragment StoreEntitySet="sysparam_children">
+          <ScalarProperty Name="paramno" ColumnName="paramno" />
+          <ScalarProperty Name="subno" ColumnName="subno" />
+          <ScalarProperty Name="subname" ColumnName="subname" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="syspower">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.syspower">
+        <MappingFragment StoreEntitySet="syspower">
+          <ScalarProperty Name="powerno" ColumnName="powerno" />
+          <ScalarProperty Name="powername" ColumnName="powername" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysrole">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysrole">
+        <MappingFragment StoreEntitySet="sysrole">
+          <ScalarProperty Name="roleno" ColumnName="roleno" />
+          <ScalarProperty Name="rolename" ColumnName="rolename" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="ynfix" ColumnName="ynfix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysrole_power">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysrole_power">
+        <MappingFragment StoreEntitySet="sysrole_power">
+          <ScalarProperty Name="roleno" ColumnName="roleno" />
+          <ScalarProperty Name="powerno" ColumnName="powerno" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="creater" ColumnName="creater" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysuser">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysuser">
+        <MappingFragment StoreEntitySet="sysuser">
+          <ScalarProperty Name="userno" ColumnName="userno" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="xingbie" ColumnName="xingbie" />
+          <ScalarProperty Name="shenfhm" ColumnName="shenfhm" />
+          <ScalarProperty Name="shoujhm" ColumnName="shoujhm" />
+          <ScalarProperty Name="isadmin" ColumnName="isadmin" />
+          <ScalarProperty Name="creater" ColumnName="creater" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="editer" ColumnName="editer" />
+          <ScalarProperty Name="editdate" ColumnName="editdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysuser_power">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysuser_power">
+        <MappingFragment StoreEntitySet="sysuser_power">
+          <ScalarProperty Name="userno" ColumnName="userno" />
+          <ScalarProperty Name="powerno" ColumnName="powerno" />
+          <ScalarProperty Name="creater" ColumnName="creater" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysuser_role">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysuser_role">
+        <MappingFragment StoreEntitySet="sysuser_role">
+          <ScalarProperty Name="userno" ColumnName="userno" />
+          <ScalarProperty Name="roleno" ColumnName="roleno" />
+          <ScalarProperty Name="creater" ColumnName="creater" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_bus">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.tbl_bus">
+        <MappingFragment StoreEntitySet="tbl_bus">
+          <ScalarProperty Name="editdate" ColumnName="editdate" />
+          <ScalarProperty Name="editer" ColumnName="editer" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="creater" ColumnName="creater" />
+          <ScalarProperty Name="busower" ColumnName="busower" />
+          <ScalarProperty Name="busname" ColumnName="busname" />
+          <ScalarProperty Name="busno" ColumnName="busno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fee">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.tbl_fee">
+        <MappingFragment StoreEntitySet="tbl_fee">
+          <ScalarProperty Name="editdate" ColumnName="editdate" />
+          <ScalarProperty Name="editer" ColumnName="editer" />
+          <ScalarProperty Name="feedate" ColumnName="feedate" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="creater" ColumnName="creater" />
+          <ScalarProperty Name="pic" ColumnName="pic" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="driver" ColumnName="driver" />
+          <ScalarProperty Name="kemuname" ColumnName="kemuname" />
+          <ScalarProperty Name="kemu" ColumnName="kemu" />
+          <ScalarProperty Name="busno" ColumnName="busno" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="syslog">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.syslog">
+        <MappingFragment StoreEntitySet="syslog">
+          <ScalarProperty Name="logip" ColumnName="logip" />
+          <ScalarProperty Name="logmemo" ColumnName="logmemo" />
+          <ScalarProperty Name="logdate" ColumnName="logdate" />
+          <ScalarProperty Name="logtype" ColumnName="logtype" />
+          <ScalarProperty Name="logno" ColumnName="logno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysserialset">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysserialset">
+        <MappingFragment StoreEntitySet="sysserialset">
+          <ScalarProperty Name="currentnumber" ColumnName="currentnumber" />
+          <ScalarProperty Name="serialnum" ColumnName="serialnum" />
+          <ScalarProperty Name="daynum" ColumnName="daynum" />
+          <ScalarProperty Name="monthnum" ColumnName="monthnum" />
+          <ScalarProperty Name="yearnum" ColumnName="yearnum" />
+          <ScalarProperty Name="lastflag" ColumnName="lastflag" />
+          <ScalarProperty Name="lastfix" ColumnName="lastfix" />
+          <ScalarProperty Name="midflag" ColumnName="midflag" />
+          <ScalarProperty Name="midfix" ColumnName="midfix" />
+          <ScalarProperty Name="preflag" ColumnName="preflag" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="serialno" ColumnName="serialno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysserialtb">
+      <EntityTypeMapping TypeName="jiax_carfinanceModel.sysserialtb">
+        <MappingFragment StoreEntitySet="sysserialtb">
+          <ScalarProperty Name="currentnumber" ColumnName="currentnumber" />
+          <ScalarProperty Name="serialfix" ColumnName="serialfix" />
+          <ScalarProperty Name="serialno" ColumnName="serialno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

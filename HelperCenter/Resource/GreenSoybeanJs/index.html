@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog</title>
+    <link rel="stylesheet" type="text/css" href="greensoybean.css?v=1">
+</head>
+<body>
+    <input id="btnshow" type="button" value="显示">
+    <input id="btntable" type="button" value="表格">
+    <div id="divframe1">alert a dialog;</div>
+    <table id="tbluser" class="gsb-table gsb-table-collapse" style="width: 100%;">
+        <thead>
+            <tr>
+                <th data-config='field:"__ROW_INDEX",align:"left",checkbox:true'>序号</th>
+                <th data-config='field:"userno,username",align:"center",width:90,format:"{0}:{1}"'>用户代码</th>
+                <th data-config='field:"username",align:"center"'>用户姓名</th>
+                <th data-config='field:"xingbie",align:"center"'>用户性别</th>
+                <th data-config='field:"shenfhm",align:"center",width:100'>身份号码</th>
+            </tr>
+        </thead>
+    </table>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="greensoybean.js?v=13"></script>
+    <script type="text/javascript" src="greensoybean.table.js?v=13"></script>
+    <script type="text/javascript" src="greensoybean.dialog.js?v=13"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btntable").click(function () {
+                var newdialog = new Greensoybean.dialog({
+                    title: '对话框-表格',
+                    contentid: 'tbluser',
+                    mode: false,
+                    width: 400,
+                    height: 400
+                })
+                newdialog.show(function () {
+                    newtable = new Greensoybean.table({
+                        url: '/Index/Users_Test',
+                        param: {
+                            pagesize: 15
+                        },
+                        selector: '#tbluser',
+                        keyfield: "userno",
+                        fixedtop: true,
+                        pagination: true,
+                        height: 365,
+                        showindex: true
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

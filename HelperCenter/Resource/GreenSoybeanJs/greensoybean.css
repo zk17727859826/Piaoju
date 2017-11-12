@@ -1,0 +1,362 @@
+body, div, table{
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: #a9a9a9;
+}
+
+body{
+    background-color: #050210;
+}
+
+a {
+    color: #00AEDD;
+    text-decoration:none;
+}
+
+    .gsb-action a {
+        background-color: #14171E;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+        line-height: 26px;
+        border:solid 1px #3a3d44;
+        border-radius: 3px;
+        margin-left:3px;
+        margin-right:3px;
+    }
+
+        .gsb-action a:hover {
+            color: #fff;
+            background-color: #0E1015;
+        }
+
+.gsb-float-left {
+    float: left;
+}
+
+.gsb-float-right {
+    float: right;
+}
+
+.gsb-wrapper {
+}
+
+.gsb-wrapper .gsb-side{
+    background-color: #04010B;
+    height: 100%;
+    width: 120px;
+    border: solid 1px #1D1A23;
+}
+
+    .gsb-wrapper .gsb-top {
+        background-color: #120F1C;
+        height: 80px;
+        border-bottom: solid 1px #1D1A23;
+    }
+
+    .gsb-wrapper .gsb-top .gsb-top-brand{
+
+    }
+
+    .gsb-wrapper .gsb-content {
+        border-bottom: solid 1px #1D1A23;
+        overflow:hidden;
+    }
+
+.gsb-hidden{
+    display: none;
+}
+
+.gsb-cursor-pointer{
+    cursor: pointer;
+}
+
+/* **************** 透明-开始 **************** */
+.gsb-opacity-1{
+.    filter:alpha(opacity=10);
+    -moz-opacity:0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+}
+.gsb-opacity-2{
+.    filter:alpha(opacity=20);
+    -moz-opacity:0.2;
+    -khtml-opacity: 0.2;
+    opacity: 0.2;
+}
+.gsb-opacity-3{
+.    filter:alpha(opacity=30);
+    -moz-opacity:0.3;
+    -khtml-opacity: 0.3;
+    opacity: 0.3;
+}
+.gsb-opacity-4{
+.    filter:alpha(opacity=40);
+    -moz-opacity:0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+.gsb-opacity-5{
+.    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+.gsb-opacity-6{
+.    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+.gsb-opacity-7{
+.    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+.gsb-opacity-8{
+.    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+.gsb-opacity-9{
+.    filter:alpha(opacity=90);
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+/* **************** 透明-开始 **************** */
+
+/* **************** 遮罩层-开始 **************** */
+.gsb-layer{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.gsb-process{
+    background-image: url('images/loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #383838;
+}
+/* **************** 遮罩层-结束 **************** */
+
+/* **************** 对话框-开始 **************** */
+.gsb-dialog{
+    display: none;
+    position: fixed;
+    /*background-color: #676767;*/
+    background-color: #DBDFEB;
+    /*background-color: #DCE0EC;*/
+    /*border: solid 1px #383838*/
+    border: solid 2px #879A9D;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.gsb-dialog .gsb-dialog-header{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    padding: 4px;
+    border-bottom: solid 1px #878787;
+    cursor: default;
+    background-color: #A0A0A0;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-icon{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-text{
+    font-size: 15px;
+    position: relative;
+}
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-text{
+    font-size: 12px;
+    top: -4px;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-close,
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-mix,
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-recover{
+    display: block;
+    position: absolute;
+    width :16px;
+    height: 16px;
+    top: 5px;
+    cursor: pointer;
+}
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-close,
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-mix,
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-recover{
+    top: 2px;
+    font-size: smaller;
+}
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-close{
+    right: 5px;
+}
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-close{
+    right: 2px;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-mix{
+    right: 30px;
+}
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-mix{
+    right: 20px;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-recover{
+    right: 30px;
+    display: none;
+}
+.gsb-dialog .gsb-dialog-header-mix .gsb-dialog-header-recover{
+    right: 20px;
+    display: none;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-close:hover,
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-mix:hover,
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-recover:hover{
+    color: #b6b6b6;
+    font-weight: 700;
+}
+
+.gsb-dialog .gsb-dialog-header .gsb-dialog-header-text{
+    /*color :#f7f7f7;*/
+    color: #D4D4D4;
+}
+
+.gsb-dialog .gsb-dialog-body{
+    background-color: #a9a9a9;
+    min-height: 200px;
+    padding: 5px;
+    overflow: auto;
+}
+
+/* **************** 对话框-结束 **************** */
+
+/* **************** 表格-结束 **************** */
+
+.gsb-table{
+    border: solid 1px #878787;
+}
+
+.gsb-table-collapse{
+    border-collapse: collapse;
+}
+
+.gsb-table-fixed{
+    table-layout: fixed;
+}
+
+.gsb-table > thead > tr > th{
+    padding: 3px;
+    height: 30px;
+    text-align: center;
+    border: solid 1px #39414F;
+    font-size: 13px;
+}
+
+.gsb-table > tbody > tr > td{
+    padding: 3px;
+    height: 30px;
+    border: solid 1px #39414F;
+    font-size: 12px;
+}
+
+/* **************** 表格-结束 **************** */
+
+/* **************** 分页-开始 **************** */
+
+.glb-pagination{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .glb-pagination .glb-pagination-btn {
+        background-color: #14171E;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+        line-height: 26px;
+        border: solid 1px #3a3d44;
+        border-radius: 3px;
+        margin-left: 3px;
+        margin-right: 3px;
+        border: solid 1px #878787;
+        color: #878787;
+    }
+
+    .glb-pagination .gsb-cursor-pointer{
+        color: #00AEDD;
+    }
+
+    .glb-pagination .gsb-cursor-pointer:hover {
+        color: #fff;
+        background-color: #0E1015;
+    }
+
+.glb-pagination .glb-pagination-btn-pre,
+.glb-pagination .glb-pagination-btn-next{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* **************** 分页-结束 **************** */
+
+/* **************** 固定表格-开始 **************** */
+.gsb-fixedtable{
+    position: relative;
+
+}
+
+.gsb-fixedtable .gsb-fixedtable-header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gsb-fixedtable .gsb-fixedtable-header .gsb-table thead{
+    background-color: #A9A9A9;
+}
+
+.gsb-fixedtable .gsb-fixedtable-content{
+    z-index: 1;
+    overflow: auto;
+    border-bottom: solid 1px #878787;
+}
+/* **************** 固定表格-结束 **************** */
+
+/* **************** 边框-开始 **************** */
+
+.gsb-border{
+    border: #39414F solid 1px;
+}
+
+.gsb-border-notop{
+    border-top: none !important;
+}
+
+/* **************** 边框-开始 **************** */

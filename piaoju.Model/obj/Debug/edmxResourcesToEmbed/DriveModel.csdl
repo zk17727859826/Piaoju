@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jiax_carfinanceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysmenu">
+    <Key>
+      <PropertyRef Name="menuno" />
+    </Key>
+    <Property Name="menuno" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="menuname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="isvalid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="menuurl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysparam">
+    <Key>
+      <PropertyRef Name="paramno" />
+      <PropertyRef Name="paramname" />
+    </Key>
+    <Property Name="paramno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="paramname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysparam_children">
+    <Key>
+      <PropertyRef Name="paramno" />
+      <PropertyRef Name="subno" />
+    </Key>
+    <Property Name="paramno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="subno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="subname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="seq" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="syspower">
+    <Key>
+      <PropertyRef Name="powerno" />
+    </Key>
+    <Property Name="powerno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="powername" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysrole">
+    <Key>
+      <PropertyRef Name="roleno" />
+    </Key>
+    <Property Name="roleno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rolename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ynfix" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="sysrole_power" Relationship="Self.FK_sysrole_power_sysrole" FromRole="sysrole" ToRole="sysrole_power" />
+    <NavigationProperty Name="sysuser_role" Relationship="Self.FK_sysuser_role_sysrole" FromRole="sysrole" ToRole="sysuser_role" />
+  </EntityType>
+  <EntityType Name="sysrole_power">
+    <Key>
+      <PropertyRef Name="roleno" />
+      <PropertyRef Name="powerno" />
+    </Key>
+    <Property Name="roleno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="powerno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="createdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="creater" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="sysrole" Relationship="Self.FK_sysrole_power_sysrole" FromRole="sysrole_power" ToRole="sysrole" />
+  </EntityType>
+  <EntityType Name="sysuser">
+    <Key>
+      <PropertyRef Name="userno" />
+    </Key>
+    <Property Name="userno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xingbie" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="shenfhm" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="shoujhm" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="isadmin" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creater" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="createdate" Type="DateTime" Precision="0" />
+    <Property Name="editer" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="sysuser_power" Relationship="Self.FK_sysuser_power_sysuser" FromRole="sysuser" ToRole="sysuser_power" />
+    <NavigationProperty Name="sysuser_role" Relationship="Self.FK_sysuser_role_sysuser" FromRole="sysuser" ToRole="sysuser_role" />
+  </EntityType>
+  <EntityType Name="sysuser_power">
+    <Key>
+      <PropertyRef Name="userno" />
+      <PropertyRef Name="powerno" />
+    </Key>
+    <Property Name="userno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="powerno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creater" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="createdate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="sysuser" Relationship="Self.FK_sysuser_power_sysuser" FromRole="sysuser_power" ToRole="sysuser" />
+  </EntityType>
+  <EntityType Name="sysuser_role">
+    <Key>
+      <PropertyRef Name="userno" />
+      <PropertyRef Name="roleno" />
+    </Key>
+    <Property Name="userno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="roleno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creater" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="createdate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="sysrole" Relationship="Self.FK_sysuser_role_sysrole" FromRole="sysuser_role" ToRole="sysrole" />
+    <NavigationProperty Name="sysuser" Relationship="Self.FK_sysuser_role_sysuser" FromRole="sysuser_role" ToRole="sysuser" />
+  </EntityType>
+  <Association Name="FK_sysrole_power_sysrole">
+    <End Role="sysrole" Type="Self.sysrole" Multiplicity="1" />
+    <End Role="sysrole_power" Type="Self.sysrole_power" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysrole">
+        <PropertyRef Name="roleno" />
+      </Principal>
+      <Dependent Role="sysrole_power">
+        <PropertyRef Name="roleno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sysuser_role_sysrole">
+    <End Role="sysrole" Type="Self.sysrole" Multiplicity="1" />
+    <End Role="sysuser_role" Type="Self.sysuser_role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysrole">
+        <PropertyRef Name="roleno" />
+      </Principal>
+      <Dependent Role="sysuser_role">
+        <PropertyRef Name="roleno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sysuser_power_sysuser">
+    <End Role="sysuser" Type="Self.sysuser" Multiplicity="1" />
+    <End Role="sysuser_power" Type="Self.sysuser_power" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysuser">
+        <PropertyRef Name="userno" />
+      </Principal>
+      <Dependent Role="sysuser_power">
+        <PropertyRef Name="userno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sysuser_role_sysuser">
+    <End Role="sysuser" Type="Self.sysuser" Multiplicity="1" />
+    <End Role="sysuser_role" Type="Self.sysuser_role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysuser">
+        <PropertyRef Name="userno" />
+      </Principal>
+      <Dependent Role="sysuser_role">
+        <PropertyRef Name="userno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="jiax_carfinanceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="sysmenu" EntityType="Self.sysmenu" />
+    <EntitySet Name="sysparam" EntityType="Self.sysparam" />
+    <EntitySet Name="sysparam_children" EntityType="Self.sysparam_children" />
+    <EntitySet Name="syspower" EntityType="Self.syspower" />
+    <EntitySet Name="sysrole" EntityType="Self.sysrole" />
+    <EntitySet Name="sysrole_power" EntityType="Self.sysrole_power" />
+    <EntitySet Name="sysuser" EntityType="Self.sysuser" />
+    <EntitySet Name="sysuser_power" EntityType="Self.sysuser_power" />
+    <EntitySet Name="sysuser_role" EntityType="Self.sysuser_role" />
+    <AssociationSet Name="FK_sysrole_power_sysrole" Association="Self.FK_sysrole_power_sysrole">
+      <End Role="sysrole" EntitySet="sysrole" />
+      <End Role="sysrole_power" EntitySet="sysrole_power" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sysuser_role_sysrole" Association="Self.FK_sysuser_role_sysrole">
+      <End Role="sysrole" EntitySet="sysrole" />
+      <End Role="sysuser_role" EntitySet="sysuser_role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sysuser_power_sysuser" Association="Self.FK_sysuser_power_sysuser">
+      <End Role="sysuser" EntitySet="sysuser" />
+      <End Role="sysuser_power" EntitySet="sysuser_power" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sysuser_role_sysuser" Association="Self.FK_sysuser_role_sysuser">
+      <End Role="sysuser" EntitySet="sysuser" />
+      <End Role="sysuser_role" EntitySet="sysuser_role" />
+    </AssociationSet>
+    <EntitySet Name="tbl_bus" EntityType="jiax_carfinanceModel.tbl_bus" />
+    <EntitySet Name="tbl_fee" EntityType="jiax_carfinanceModel.tbl_fee" />
+    <EntitySet Name="syslog" EntityType="jiax_carfinanceModel.syslog" />
+    <EntitySet Name="sysserialset" EntityType="jiax_carfinanceModel.sysserialset" />
+    <EntitySet Name="sysserialtb" EntityType="jiax_carfinanceModel.sysserialtb" />
+  </EntityContainer>
+  <EntityType Name="tbl_bus">
+    <Key>
+      <PropertyRef Name="busno" />
+    </Key>
+    <Property Name="busno" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="busname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="busower" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="creater" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="createdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editer" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbl_fee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="busno" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="kemu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="kemuname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="driver" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fee" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="pic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="creater" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="createdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="feedate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="editer" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="syslog">
+    <Key>
+      <PropertyRef Name="logno" />
+    </Key>
+    <Property Name="logno" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="logtype" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="logdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="logmemo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="logip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysserialset">
+    <Key>
+      <PropertyRef Name="prefix" />
+    </Key>
+    <Property Name="serialno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="prefix" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="preflag" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="midfix" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="midflag" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="lastfix" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="lastflag" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="yearnum" Type="Int32" />
+    <Property Name="monthnum" Type="Int32" />
+    <Property Name="daynum" Type="Int32" />
+    <Property Name="serialnum" Type="Int32" />
+    <Property Name="currentnumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysserialtb">
+    <Key>
+      <PropertyRef Name="serialno" />
+    </Key>
+    <Property Name="serialno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="serialfix" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="currentnumber" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

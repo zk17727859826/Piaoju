@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jiaxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Txueyuan">
+    <Key>
+      <PropertyRef Name="Xuey_ID" />
+    </Key>
+    <Property Name="Xuey_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Xingming" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Xingbie" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Chusrq" Type="DateTime" Precision="3" />
+    <Property Name="Zhengjzl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Shenfhm" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Zanzzhm" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Zhaop" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Diqu" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Lianxdz" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Zhusdz" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Dianh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Youzbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Shenqzl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Xianzcx" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Shenqcx" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tijian" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Riqi" Type="DateTime" Precision="3" />
+    <Property Name="ZhiwenA" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="ZhiwenB" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Danganbh" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Xuey_Ic" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Mima" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Xueyh" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Xuexzt" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Shenhzt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Qici" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Kaibrq" Type="DateTime" Precision="3" />
+    <Property Name="Yungqc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Xueyz" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jieyz" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Baom_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jiax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jianl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Xingbie_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Zhengjzl_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Diqu_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shenqzl_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Xianzcx_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shenqcx_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tijian_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shenhzt_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Xuexzt_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jiax_sm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Zwapic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Zwbpic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="jieyrq" Type="DateTime" Precision="3" />
+    <Property Name="Tuixrq" Type="DateTime" Precision="3" />
+    <Property Name="Jinengzmbh" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Jinengzmrq" Type="DateTime" Precision="3" />
+    <Property Name="Guddh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Baomd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Jiaxmc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Jiesr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Weisjhrq" Type="DateTime" Precision="3" />
+    <Property Name="ycode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tzidian">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Zidxh" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Zidxh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shuom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Beiz" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tzidianlst">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Shuom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Beiz" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="jiaxEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Txueyuan" EntityType="Self.Txueyuan" />
+    <EntitySet Name="Tzidian" EntityType="Self.Tzidian" />
+    <EntitySet Name="Tzidianlst" EntityType="Self.Tzidianlst" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title -- 中天驾校</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="@Url.Content("~/Resource/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8" src="@Url.Content("~/Resource/Javascript/jquery.min.js")"></script>
+    <script type="text/javascript" charset="utf-8" src="@Url.Content("~/Resource/bootstrap/js/bootstrap.min.js")"></script>
+    @RenderSection("header", false)
+</head>
+<body>
+    @RenderBody()
+    @RenderSection("script", false)
+</body>
+</html>

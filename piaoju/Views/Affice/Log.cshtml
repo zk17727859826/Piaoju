@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "日志记录";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                日志记录
+            </h1>
+        </div>
+    </div>
+    <form class="form-inline" role="form" action="@Url.Action("Index")">
+        <div class="form-group">
+            <label class="sr-only" for="name">开始日期</label>
+            <input type="text" class="form-control" id="startdate" onfocus="WdatePicker();" name="userno" placeholder="请输入开始日期">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">结束日期</label>
+            <input type="text" class="form-control" id="enddate" onfocus="WdatePicker();" name="username" placeholder="请输入结束日期">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="name">操作员</label>
+            @Html.Action("Operator", "Common", new { classname = "form-control", id = "oper" })
+        </div>
+        <input type="button" class="btn btn-default" id="btnQuery" value="查询" />
+    </form>
+    <div style="height:10px;"></div>
+    <table class="table table-bordered" id="feetable">
+        <thead>
+            <tr>
+                <th style="text-align:center;" data-config="field:'operator_name',width:'150',align:'center'">操作员</th>
+                <th style="text-align:center;" data-config="field:'riqi',width:'150'">日期</th>
+                <th style="text-align:left;" data-config="field:'thing'">事件</th>
+            </tr>
+        </thead>
+        <tbody id="userbody"></tbody>
+    </table>
+</div>
+
+@section script{
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table.js")"></script>
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.js")"></script>
+    <script src="@Url.Content("~/Resource/My97DatePicker/WdatePicker.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/log.js?v=" + ViewBag.ScriptVer)"></script>
+}

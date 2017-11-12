@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+@section header{
+    <link href="@Url.Content("~/Resource/bootstrap/css/bootstrap.index.css")" rel="stylesheet" type="text/css" />
+}
+@RenderSection("header", false)
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">中天驾校</a>
+        </div>
+        <ul class="nav navbar-right top-nav">
+            <li class="active">
+                <a><i class="glyphicon glyphicon-magnet"></i>系统管理</a>
+            </li>
+            <li>
+                <a href="/affice/acceptlist"><i class="glyphicon glyphicon-shopping-cart"></i>票据管理</a>
+            </li>
+            <li>
+                <a><i class="glyphicon glyphicon-user"></i>@jiax_drive_affice.Controllers.BaseController.GetUser().xingming</a>
+            </li>
+            <li class="dropdown">
+                <a href="/Login/Logout"><i class="glyphicon glyphicon-log-out"></i>退出程序</a>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav" id="leftnav" style="overflow:hidden;">
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "index" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "index") ? "active" : "")">
+                    <a href="@Url.Action("Index", "Index")"><i class="glyphicon glyphicon-user"></i>个人信息</a>
+                </li>
+                @if (jiax_drive_affice.Controllers.BaseController.GetUser().power == "S") { 
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "index" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "users") ? "active" : "")">
+                    <a href="@Url.Action("Users", "Index")"><i class="glyphicon glyphicon-user"></i>用户管理</a>
+                </li>
+                }
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "index" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "password") ? "active" : "")">
+                    <a href="@Url.Action("Password", "Index")"><i class="glyphicon glyphicon-user"></i>修改密码</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <div id="page-wrapper" style="height:100%;">
+        @RenderBody()
+    </div>
+</div>
+@section script{
+    <script type="text/javascript">
+        $("#leftnav > li").click(function () {
+            $("#leftnav > li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        function initContentHeight() {
+            var winHeight = $(window).height();
+            var contentHeight = $("#page-wrapper").height();
+            if (winHeight - 50 > contentHeight) {
+                $("#page-wrapper").css("min-height", winHeight - 50);
+            }
+        }
+
+        $(document).ready(function () {
+            initContentHeight();
+        });
+
+        $(window).resize(function () {
+            initContentHeight();
+        });
+    </script>
+}
+@RenderSection("script", false)

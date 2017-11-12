@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+
+dfasfasfsafasfasd
+<table id="tbluser" class="gsb-table gsb-table-collapse gsb-table-fixed">
+    <thead>
+        <tr>
+            <th data-config='field:"userno",align:"center",width:50,checkbox:true,showtext:false'></th>
+            <th data-config='field:"userno",align:"center",width:100'>用户代码</th>
+            <th data-config='field:"username",align:"center",width:100'>用户名称</th>
+            <th data-config='field:"xingbie",align:"center",width:60'>用户性别</th>
+            <th data-config='field:"shenfhm",align:"center",width:200'>身份号码</th>
+            <th data-config='field:"shoujhm",align:"center",width:120'>手机号码</th>
+            <th data-config='field:"isadmin",align:"center",width:60'>管理员</th>
+            <th data-config='field:"userno",align:"center",width:200,tdclass:"gsb-action gsb-border-radio",formatter:showAction'>操作</th>
+        </tr>
+    </thead>
+</table>
+@section script{
+    <script src="~/Resource/GreenSoybeanJs/greensoybean.js"></script>
+    <script src="~/Resource/GreenSoybeanJs/greensoybean.table.js"></script>
+    <script>
+        $(document).ready(function () {
+            var tbluserobj = new Greensoybean.table({
+                selector: "#tbluser",
+                url: '/User/Users',
+                param: {
+                    userno: "",
+                    username: "",
+                    pagesize: 10
+                },
+                pagination: true
+            });
+        });
+
+        function showAction(row, index, value) {
+            var html = "";
+            html += "<a href='javascript:void(0);'>权限</a>";
+            html += "<a href='javascript:void(0);'>编辑</a>";            
+            html += "<a href='javascript:void(0);'>删除</a>";
+            return html;
+        }
+    </script>
+}

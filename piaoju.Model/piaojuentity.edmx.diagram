@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91639be2c12d483fb7812e34b1f67f7c" Name="Diagram1">
+        <EntityTypeShape EntityType="detailsModel.dtproperties" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="detailsModel.Tjournals" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="detailsModel.Toperator" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="detailsModel.Txueyuan" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="detailsModel.Tbianma" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="detailsModel.Tzhidian" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="detailsModel.Tzhidian1" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="detailsModel.Tdetails" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

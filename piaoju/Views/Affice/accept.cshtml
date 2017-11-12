@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "收费";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+@section header{
+    <style>
+        .table td {
+            vertical-align: middle !important;
+        }
+    </style>    
+}
+<div class="container-fluid" style="width:21.29cm; height:9.31cm;">
+    <div class="row">
+        <div class="text-center">
+            <h4>东海县中天驾驶员培训有限公司</h4>
+        </div>
+        <div class="text-center">
+            <h4>收 款 收 据</h4>
+        </div>
+        <div class="text-right">
+            <h5>No.@ViewBag.Bianma</h5>
+            <input type="hidden" id="bianma" value="@ViewBag.Bianma" />
+        </div>
+        <div></div>
+        <div>
+            <table class="table table-bordered">
+                <tr>
+                    <td class="text-center" style="width:80px;">报名点<br />缴费点</td>
+                    <td style="width:100px;">
+                        @Html.Action("Baomd", "Common", new { id = "baomd", name = "baomd", classname = "form-control" })
+                    </td>
+                    <td class="text-center" style="width:80px;">学员号</td>
+                    <td style="width:100px;"><input type="text" id="xueyh" name="xueyh" class="form-control" value="@ViewBag.Xueyh" /></td>
+                    <td class="text-center" style="width:80px;">身份证</td>
+                    <td><input type="text" id="shenfhm" name="shenfhm" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="text-center">
+                        <input type="button" id="btnGet" class="btn btn-primary" value="获得学员信息" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:40px;" class="text-center">缴款单位<br />或个人</td>
+                    <td colspan="5">
+                        <input type="text" id="man" name="man" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="height: 40px;">款项内容</td>
+                    <td colspan="3">
+                        @Html.Action("Paytype", "Common", new { classname = "form-control", id = "type", name = "type" })
+                    </td>
+                    <td class="text-center">收款方式</td>
+                    <td>
+                        <input type="text" id="shoukfs" name="shoukfs" class="form-control" value="现金" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="height: 40px;">人民币<br />大写</td>
+                    <td colspan="3">
+                        <div type="text" id="moneyUpper" name="moneyUpper" class="form-control" />
+                    </td>
+                    <td class="text-center">金额(￥)</td>
+                    <td>
+                        <input type="text" id="money" name="money" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="height:105px; vertical-align:middle">收款单<br />位盖章</td>
+                    <td></td>
+                    <td class="text-center" style="vertical-align:middle">收款人签章</td>
+                    <td class="text-center">
+                        @ViewBag.User
+                    </td>
+                    <td class="text-center" style="vertical-align:middle">备注</td>
+                    <td>
+                        <textarea class="form-control" style="max-width:380px; min-height:95px;" id="memo"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="text-center">
+                <input type="button" class="btn btn-primary" id="btnsave" value="保 存" />
+                <input type="button" class="btn btn-primary" style="display:none" id="btnprint" value="打 印" />
+            </div>
+        </div>
+    </div>
+</div>
+@section script{
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/accept.js?v=" + ViewBag.ScriptVer)"></script>
+}

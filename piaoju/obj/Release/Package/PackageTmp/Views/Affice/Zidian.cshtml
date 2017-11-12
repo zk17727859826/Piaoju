@@ -1,0 +1,50 @@
+﻿@model IEnumerable<piaoju.Model.Tzhidian>
+@{
+    ViewBag.Title = "字典管理";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                字典管理
+            </h1>
+        </div>
+    </div>
+    <table class="table table-bordered" id="feetable">
+        <thead>
+            <tr>
+                <th style="width:100px;">编码</th>
+                <th style="width:100px;">内容</th>
+                <th>备注</th>
+                <th style="width:100px;">详细内容</th>
+            </tr>
+        </thead>
+        <tbody id="userbody">
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <th style="width:100px;">@item.id</th>
+                        <th style="width:100px;">@item.content</th>
+                        <th>@item.memo</th>
+                        <th style="width:100px;"><a href="/Affice/Zidian1?id=@item.id">详细内容</a></th>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@section script{
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table.js")"></script>
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.js")"></script>
+    <script src="@Url.Content("~/Resource/My97DatePicker/WdatePicker.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/log.js?v=" + ViewBag.ScriptVer)"></script>
+}
+
+

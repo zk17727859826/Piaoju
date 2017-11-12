@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48A98711-2082-48A8-A51E-6C5BDAB09C22}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>piaoju</RootNamespace>
+    <AssemblyName>piaoju</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\..\..\QRCode\dll\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AfficeController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DetailModel.cs" />
+    <Compile Include="Models\ImageResult.cs" />
+    <Compile Include="Models\WebPrintClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="jatoolsPrinter.cab" />
+    <Content Include="PrintActivex.exe" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table-locale-all.js" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table-locale-all.min.js" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table-zh-CN.js" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table.css" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table.js" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table.min.css" />
+    <Content Include="Resource\bootstrap\bootstrap.table\bootstrap-table.min.js" />
+    <Content Include="Resource\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Resource\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Resource\bootstrap\css\bootstrap.css" />
+    <Content Include="Resource\bootstrap\css\bootstrap.index.css" />
+    <Content Include="Resource\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resource\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resource\bootstrap\js\bootstrap.js" />
+    <Content Include="Resource\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resource\bootstrap\js\npm.js" />
+    <Content Include="Resource\css\login.css" />
+    <Content Include="Resource\Images\bg-body.gif" />
+    <Content Include="Resource\Images\bg-side.gif" />
+    <Content Include="Resource\Images\bg.gif" />
+    <Content Include="Resource\Images\slid-current-arrow.gif" />
+    <Content Include="Resource\javascript\jatoolsPrinter.js" />
+    <Content Include="Resource\javascript\accept.js" />
+    <Content Include="Resource\javascript\core.js" />
+    <Content Include="Resource\javascript\czygl.js" />
+    <Content Include="Resource\javascript\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Resource\javascript\jquery.jqprint-0.3.js" />
+    <Content Include="Resource\javascript\jquery.min.js" />
+    <Content Include="Resource\javascript\log.js" />
+    <Content Include="Resource\javascript\login.js" />
+    <Content Include="Resource\javascript\menu.js" />
+    <Content Include="Resource\javascript\param.js" />
+    <Content Include="Resource\javascript\password.js" />
+    <Content Include="Resource\javascript\paylist.js" />
+    <Content Include="Resource\javascript\role.js" />
+    <Content Include="Resource\javascript\subparam.js" />
+    <Content Include="Resource\javascript\user.js" />
+    <Content Include="Resource\javascript\zd.js" />
+    <Content Include="Resource\My97DatePicker\calendar.js" />
+    <Content Include="Resource\My97DatePicker\lang\en.js" />
+    <Content Include="Resource\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Resource\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Resource\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Resource\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Resource\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Resource\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Resource\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Resource\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Resource\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Resource\My97DatePicker\WdatePicker.js" />
+    <Content Include="Resource\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Resource\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Resource\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Resource\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Resource\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Resource\upload\bg.png" />
+    <Content Include="Resource\upload\expressInstall.swf" />
+    <Content Include="Resource\upload\icons.png" />
+    <Content Include="Resource\upload\image.png" />
+    <Content Include="Resource\upload\progress.png" />
+    <Content Include="Resource\upload\success.png" />
+    <Content Include="Resource\upload\upload.css" />
+    <Content Include="Resource\upload\upload.js" />
+    <Content Include="Resource\upload\Uploader.swf" />
+    <Content Include="Resource\upload\webuploader.css" />
+    <Content Include="Resource\upload\webuploader.js" />
+    <Content Include="Resource\upload\webuploader.nolog.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Share\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Resource\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Resource\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resource\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resource\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resource\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Share\_Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ImagesManageSystem\jiax_ims\tg.Helper\tg.Helper.csproj">
+      <Project>{40064076-ca86-43bb-a6db-3b5c9183a9da}</Project>
+      <Name>tg.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\jiax.Model\jiax.Model.csproj">
+      <Project>{147716c5-d62a-4efc-8890-7cf023b42cba}</Project>
+      <Name>jiax.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\piaoju.Bll\piaoju.Bll.csproj">
+      <Project>{493b3cb5-a85d-4d49-91ae-22618962763c}</Project>
+      <Name>piaoju.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\piaoju.Model\piaoju.Model.csproj">
+      <Project>{d08a8f80-9172-4212-ae04-fd69a79d44f8}</Project>
+      <Name>piaoju.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Index\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Logout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Share\_System.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Index\Password.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Index\Users.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\driveraffice.pubxml" />
+    <Content Include="Views\Affice\acceptlist.cshtml" />
+    <Content Include="Views\Common\Operator.cshtml" />
+    <Content Include="Views\Affice\accept.cshtml" />
+    <Content Include="Views\Common\Baomd.cshtml" />
+    <Content Include="Views\Common\Paytype.cshtml" />
+    <Content Include="Views\Affice\Detail.cshtml" />
+    <Content Include="Views\Affice\xueyuanlist.cshtml" />
+    <Content Include="Views\Affice\XueyuanDetails.cshtml" />
+    <Content Include="Views\Affice\paylist.cshtml" />
+    <Content Include="Views\Affice\Log.cshtml" />
+    <Content Include="Views\Affice\Zidian.cshtml" />
+    <Content Include="Views\Affice\Zidian1.cshtml" />
+    <Content Include="Views\Affice\AddZidian1.cshtml" />
+    <None Include="Properties\PublishProfiles\piaoju.pubxml" />
+    <Content Include="Resource\printfr\piaoju.fr3" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53495</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53495/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

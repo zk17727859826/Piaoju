@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+@section header{
+}
+@RenderSection("header", false)
+<div class="gsb-top">
+
+</div>
+<div id="left_side" class="gsb-side gsb-border-notop gsb-float-left gsb-opacity-7">
+
+</div>
+<div id="right_side" class="gsb-content gsb-float-right gsb-opacity-7">
+    @RenderBody()
+</div>
+@section script{
+    <script>
+        function initContentHeight() {
+            var winHeight = $(window).height();
+            var bottomheight = winHeight - 83;
+            if (bottomheight < 300) {
+                bottomheight = 300;
+            }
+
+            var winWidth = $(window).width();
+            var rightwidth = winWidth - 122;
+            if (rightwidth < 400) {
+                rightwidth = 400;
+            }
+            $("#left_side").height(bottomheight);
+            $("#right_side").height(bottomheight);
+            $("#right_side iframe").height(bottomheight);
+            $("#right_side").width(rightwidth);
+        }
+
+        $(document).ready(function () {
+            initContentHeight();
+        });
+
+        $(window).resize(function () {
+            initContentHeight();
+        });
+    </script>
+}
+@RenderSection("script", false)

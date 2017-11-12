@@ -1,0 +1,88 @@
+﻿@{
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+@section header{
+    <link href="@Url.Content("~/Resource/bootstrap/css/bootstrap.index.css")" rel="stylesheet" type="text/css" />
+}
+@RenderSection("header", false)
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">中天驾校</a>
+        </div>
+        <ul class="nav navbar-right top-nav">
+            <li>
+                <a href="/Index"><i class="glyphicon glyphicon-magnet"></i><span>系统管理</span></a>
+            </li>
+            <li class="active">
+                <a><i class="glyphicon glyphicon-shopping-cart"></i><span>票据管理</span></a>
+            </li>
+            <li>
+                <a><i class="glyphicon glyphicon-user"></i><span>@jiax_drive_affice.Controllers.BaseController.GetUser().xingming</span></a>
+            </li>
+            <li class="dropdown">
+                <a href="/Login/Logout"><i class="glyphicon glyphicon-log-out"></i><span>退出程序</span></a>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav" id="leftnav" style="overflow:hidden;">
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "affice" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "acceptlist") ? "active" : "")">
+                    <a href="/affice/acceptlist"><i class="glyphicon glyphicon-picture"></i>操作员收费记录</a>
+                </li>
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "affice" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "accept") ? "active" : "")">
+                    <a href="/affice/accept"><i class="glyphicon glyphicon-picture"></i>收费</a>
+                </li>
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "affice" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "xueyuanlist") ? "active" : "")">
+                    <a href="/affice/xueyuanlist"><i class="glyphicon glyphicon-picture"></i>学员交费记录</a>
+                </li>                
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "affice" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "paylist") ? "active" : "")">
+                    <a href="/affice/paylist"><i class="glyphicon glyphicon-picture"></i>交费记录</a>
+                </li>
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "affice" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "log") ? "active" : "")">
+                    <a href="/affice/log"><i class="glyphicon glyphicon-picture"></i>日志管理</a>
+                </li>
+                <li class="@((ViewContext.RouteData.Values["controller"].ToString().ToLower() == "affice" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "zidian") ? "active" : "")">
+                    <a href="/affice/zidian"><i class="glyphicon glyphicon-picture"></i>字典管理</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <div id="page-wrapper" style="height:100%;">
+        @RenderBody()
+    </div>
+</div>
+@section script{
+    <script type="text/javascript">
+        $("#leftnav > li").click(function () {
+            $("#leftnav > li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        function initContentHeight() {
+            var winHeight = $(window).height();
+            var contentHeight = $("#page-wrapper").height();
+            if (winHeight - 50 > contentHeight) {
+                $("#page-wrapper").css("min-height", winHeight - 50);
+            }
+        }
+
+        $(document).ready(function () {
+            initContentHeight();
+        });
+
+        $(window).resize(function () {
+            initContentHeight();
+        });
+    </script>
+}
+@RenderSection("script", false)

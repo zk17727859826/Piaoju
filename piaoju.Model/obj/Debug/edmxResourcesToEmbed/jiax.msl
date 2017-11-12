@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="jiaxModelStoreContainer" CdmEntityContainer="jiaxEntities">
+    <EntitySetMapping Name="Tzidianlst">
+      <EntityTypeMapping TypeName="jiaxModel.Tzidianlst">
+        <MappingFragment StoreEntitySet="Tzidianlst">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Shuom" ColumnName="Shuom" />
+          <ScalarProperty Name="Beiz" ColumnName="Beiz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tzidian">
+      <EntityTypeMapping TypeName="jiaxModel.Tzidian">
+        <MappingFragment StoreEntitySet="Tzidian">
+          <ScalarProperty Name="Beiz" ColumnName="Beiz" />
+          <ScalarProperty Name="Shuom" ColumnName="Shuom" />
+          <ScalarProperty Name="Zidxh" ColumnName="Zidxh" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbaoming">
+      <EntityTypeMapping TypeName="jiaxModel.Tbaoming">
+        <MappingFragment StoreEntitySet="Tbaoming">
+          <ScalarProperty Name="huji" ColumnName="huji" />
+          <ScalarProperty Name="guoj" ColumnName="guoj" />
+          <ScalarProperty Name="lianxxzqh" ColumnName="lianxxzqh" />
+          <ScalarProperty Name="zhusxzqh" ColumnName="zhusxzqh" />
+          <ScalarProperty Name="ycode" ColumnName="ycode" />
+          <ScalarProperty Name="Weisjhrq" ColumnName="Weisjhrq" />
+          <ScalarProperty Name="Jiaxmc" ColumnName="Jiaxmc" />
+          <ScalarProperty Name="Jiax" ColumnName="Jiax" />
+          <ScalarProperty Name="Jiesr" ColumnName="Jiesr" />
+          <ScalarProperty Name="Zhekje" ColumnName="Zhekje" />
+          <ScalarProperty Name="Baomd" ColumnName="Baomd" />
+          <ScalarProperty Name="Guddh" ColumnName="Guddh" />
+          <ScalarProperty Name="Zhusdz_DL" ColumnName="Zhusdz_DL" />
+          <ScalarProperty Name="Shenfhm_DL" ColumnName="Shenfhm_DL" />
+          <ScalarProperty Name="Zhengjzl_DL" ColumnName="Zhengjzl_DL" />
+          <ScalarProperty Name="Xingming_DL" ColumnName="Xingming_DL" />
+          <ScalarProperty Name="Yinan" ColumnName="Yinan" />
+          <ScalarProperty Name="Tuixje" ColumnName="Tuixje" />
+          <ScalarProperty Name="ZheKYY" ColumnName="ZheKYY" />
+          <ScalarProperty Name="ZheK" ColumnName="ZheK" />
+          <ScalarProperty Name="Yingsje" ColumnName="Yingsje" />
+          <ScalarProperty Name="Zwbpic" ColumnName="Zwbpic" />
+          <ScalarProperty Name="Zwapic" ColumnName="Zwapic" />
+          <ScalarProperty Name="Tijian_sm" ColumnName="Tijian_sm" />
+          <ScalarProperty Name="Zhuangt" ColumnName="Zhuangt" />
+          <ScalarProperty Name="Shenqcx_sm" ColumnName="Shenqcx_sm" />
+          <ScalarProperty Name="Xianzcx_sm" ColumnName="Xianzcx_sm" />
+          <ScalarProperty Name="Shenqzl_sm" ColumnName="Shenqzl_sm" />
+          <ScalarProperty Name="Diqu_sm" ColumnName="Diqu_sm" />
+          <ScalarProperty Name="Zhengjzl_sm" ColumnName="Zhengjzl_sm" />
+          <ScalarProperty Name="Xingbie_sm" ColumnName="Xingbie_sm" />
+          <ScalarProperty Name="Feiyong" ColumnName="Feiyong" />
+          <ScalarProperty Name="Mima" ColumnName="Mima" />
+          <ScalarProperty Name="Xuey_Ic" ColumnName="Xuey_Ic" />
+          <ScalarProperty Name="Xueyh" ColumnName="Xueyh" />
+          <ScalarProperty Name="Jianl" ColumnName="Jianl" />
+          <ScalarProperty Name="Riqi" ColumnName="Riqi" />
+          <ScalarProperty Name="ZhiwenB" ColumnName="ZhiwenB" />
+          <ScalarProperty Name="ZhiwenA" ColumnName="ZhiwenA" />
+          <ScalarProperty Name="Tijian" ColumnName="Tijian" />
+          <ScalarProperty Name="Shenqcx" ColumnName="Shenqcx" />
+          <ScalarProperty Name="Xianzcx" ColumnName="Xianzcx" />
+          <ScalarProperty Name="Shenqzl" ColumnName="Shenqzl" />
+          <ScalarProperty Name="Youzbm" ColumnName="Youzbm" />
+          <ScalarProperty Name="Dianh" ColumnName="Dianh" />
+          <ScalarProperty Name="Zhusdz" ColumnName="Zhusdz" />
+          <ScalarProperty Name="Lianxdz" ColumnName="Lianxdz" />
+          <ScalarProperty Name="Diqu" ColumnName="Diqu" />
+          <ScalarProperty Name="Zhaop" ColumnName="Zhaop" />
+          <ScalarProperty Name="Zanzzhm" ColumnName="Zanzzhm" />
+          <ScalarProperty Name="Shenfhm" ColumnName="Shenfhm" />
+          <ScalarProperty Name="Zhengjzl" ColumnName="Zhengjzl" />
+          <ScalarProperty Name="Chusrq" ColumnName="Chusrq" />
+          <ScalarProperty Name="Xingbie" ColumnName="Xingbie" />
+          <ScalarProperty Name="Xingming" ColumnName="Xingming" />
+          <ScalarProperty Name="Baom_ID" ColumnName="Baom_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Txueyuan">
+      <EntityTypeMapping TypeName="jiaxModel.Txueyuan">
+        <MappingFragment StoreEntitySet="Txueyuan">
+          <ScalarProperty Name="ycode" ColumnName="ycode" />
+          <ScalarProperty Name="Weisjhrq" ColumnName="Weisjhrq" />
+          <ScalarProperty Name="Jiesr" ColumnName="Jiesr" />
+          <ScalarProperty Name="Jiaxmc" ColumnName="Jiaxmc" />
+          <ScalarProperty Name="Baomd" ColumnName="Baomd" />
+          <ScalarProperty Name="Guddh" ColumnName="Guddh" />
+          <ScalarProperty Name="Jinengzmrq" ColumnName="Jinengzmrq" />
+          <ScalarProperty Name="Jinengzmbh" ColumnName="Jinengzmbh" />
+          <ScalarProperty Name="Tuixrq" ColumnName="Tuixrq" />
+          <ScalarProperty Name="jieyrq" ColumnName="jieyrq" />
+          <ScalarProperty Name="Zwbpic" ColumnName="Zwbpic" />
+          <ScalarProperty Name="Zwapic" ColumnName="Zwapic" />
+          <ScalarProperty Name="Jiax_sm" ColumnName="Jiax_sm" />
+          <ScalarProperty Name="Xuexzt_sm" ColumnName="Xuexzt_sm" />
+          <ScalarProperty Name="Shenhzt_sm" ColumnName="Shenhzt_sm" />
+          <ScalarProperty Name="Tijian_sm" ColumnName="Tijian_sm" />
+          <ScalarProperty Name="Shenqcx_sm" ColumnName="Shenqcx_sm" />
+          <ScalarProperty Name="Xianzcx_sm" ColumnName="Xianzcx_sm" />
+          <ScalarProperty Name="Shenqzl_sm" ColumnName="Shenqzl_sm" />
+          <ScalarProperty Name="Diqu_sm" ColumnName="Diqu_sm" />
+          <ScalarProperty Name="Zhengjzl_sm" ColumnName="Zhengjzl_sm" />
+          <ScalarProperty Name="Xingbie_sm" ColumnName="Xingbie_sm" />
+          <ScalarProperty Name="Jianl" ColumnName="Jianl" />
+          <ScalarProperty Name="Jiax" ColumnName="Jiax" />
+          <ScalarProperty Name="Baom_ID" ColumnName="Baom_ID" />
+          <ScalarProperty Name="Jieyz" ColumnName="Jieyz" />
+          <ScalarProperty Name="Xueyz" ColumnName="Xueyz" />
+          <ScalarProperty Name="Yungqc" ColumnName="Yungqc" />
+          <ScalarProperty Name="Kaibrq" ColumnName="Kaibrq" />
+          <ScalarProperty Name="Qici" ColumnName="Qici" />
+          <ScalarProperty Name="Shenhzt" ColumnName="Shenhzt" />
+          <ScalarProperty Name="Xuexzt" ColumnName="Xuexzt" />
+          <ScalarProperty Name="Xueyh" ColumnName="Xueyh" />
+          <ScalarProperty Name="Mima" ColumnName="Mima" />
+          <ScalarProperty Name="Xuey_Ic" ColumnName="Xuey_Ic" />
+          <ScalarProperty Name="Danganbh" ColumnName="Danganbh" />
+          <ScalarProperty Name="ZhiwenB" ColumnName="ZhiwenB" />
+          <ScalarProperty Name="ZhiwenA" ColumnName="ZhiwenA" />
+          <ScalarProperty Name="Riqi" ColumnName="Riqi" />
+          <ScalarProperty Name="Tijian" ColumnName="Tijian" />
+          <ScalarProperty Name="Shenqcx" ColumnName="Shenqcx" />
+          <ScalarProperty Name="Xianzcx" ColumnName="Xianzcx" />
+          <ScalarProperty Name="Shenqzl" ColumnName="Shenqzl" />
+          <ScalarProperty Name="Youzbm" ColumnName="Youzbm" />
+          <ScalarProperty Name="Dianh" ColumnName="Dianh" />
+          <ScalarProperty Name="Zhusdz" ColumnName="Zhusdz" />
+          <ScalarProperty Name="Lianxdz" ColumnName="Lianxdz" />
+          <ScalarProperty Name="Diqu" ColumnName="Diqu" />
+          <ScalarProperty Name="Zhaop" ColumnName="Zhaop" />
+          <ScalarProperty Name="Zanzzhm" ColumnName="Zanzzhm" />
+          <ScalarProperty Name="Shenfhm" ColumnName="Shenfhm" />
+          <ScalarProperty Name="Zhengjzl" ColumnName="Zhengjzl" />
+          <ScalarProperty Name="Chusrq" ColumnName="Chusrq" />
+          <ScalarProperty Name="Xingbie" ColumnName="Xingbie" />
+          <ScalarProperty Name="Xingming" ColumnName="Xingming" />
+          <ScalarProperty Name="Xuey_ID" ColumnName="Xuey_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

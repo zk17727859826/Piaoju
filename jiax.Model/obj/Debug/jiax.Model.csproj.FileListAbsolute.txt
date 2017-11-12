@@ -1,0 +1,8 @@
+E:\系统源码\VS2013\piaoju\jiax.Model\bin\Debug\jiax.Model.dll.config
+E:\系统源码\VS2013\piaoju\jiax.Model\bin\Debug\jiax.Model.dll
+E:\系统源码\VS2013\piaoju\jiax.Model\bin\Debug\jiax.Model.pdb
+E:\系统源码\VS2013\piaoju\jiax.Model\bin\Debug\EntityFramework.dll
+E:\系统源码\VS2013\piaoju\jiax.Model\bin\Debug\EntityFramework.xml
+E:\系统源码\VS2013\piaoju\jiax.Model\obj\Debug\jiax.Model.dll
+E:\系统源码\VS2013\piaoju\jiax.Model\obj\Debug\jiax.Model.pdb
+E:\系统源码\VS2013\piaoju\jiax.Model\obj\Debug\jiax.Model.csprojResolveAssemblyReference.cache

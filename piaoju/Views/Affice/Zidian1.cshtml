@@ -1,0 +1,59 @@
+﻿@model IEnumerable<piaoju.Model.Tzhidian1>
+@{
+    ViewBag.Title = "字典管理";
+    Layout = "~/Views/Share/_Index.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">
+                字典管理-@ViewBag.ZdContent
+            </h1>
+        </div>
+    </div>
+    <a class="btn btn-primary" href="/Affice/AddZidian1?upid=@ViewBag.UPID">添加字典</a>
+    <div style="height:5px;"></div>
+    <table class="table table-bordered" id="feetable">
+        <thead>
+            <tr>
+                <th class="text-center" style="width:100px;">编码</th>
+                <th style="width:300px;">内容</th>
+                <th>备注</th>
+                <th class="text-center" style="width:60px;">编辑</th>
+                <th class="text-center" style="width:60px;">删除</th>
+            </tr>
+        </thead>
+        <tbody id="userbody">
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <th class="text-center" style="width:100px;">@item.id</th>
+                        <th style="width:100px;">@item.content</th>
+                        <th>@item.memo</th>
+                        <th class="text-center" style="width:60px;"><a href="/Affice/AddZidian1?id=@item.id&upid=@item.upid">编辑</a></th>
+                        <th class="text-center" style="width:60px;"><a href="javascript:void(0);" class="delete" data-id="@item.id" data-upid="@item.upid">删除</a></th>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@section script{
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table.js")"></script>
+    <script src="@Url.Content("~/Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.js")"></script>
+    <script src="@Url.Content("~/Resource/My97DatePicker/WdatePicker.js")"></script>
+    <script src="@Url.Content("~/Resource/javascript/core.js?v=" + ViewBag.ScriptVer)"></script>
+    <script src="@Url.Content("~/Resource/JavaScript/zd.js?v=" + ViewBag.ScriptVer)"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initDelete();
+        });
+    </script>
+}
+
+

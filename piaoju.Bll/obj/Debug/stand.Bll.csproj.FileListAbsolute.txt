@@ -1,0 +1,14 @@
+E:\系统源码\VS2013\stand\stand.Bll\obj\Debug\stand.Bll.csprojResolveAssemblyReference.cache
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\stand.Bll.dll
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\stand.Bll.pdb
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\stand.Dal.dll
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\stand.Model.dll
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\tg.Helper.dll
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\ChnCharInfo.dll
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\EntityFramework.dll
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\tg.Helper.pdb
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\stand.Dal.pdb
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\stand.Model.pdb
+E:\系统源码\VS2013\stand\stand.Bll\bin\Debug\EntityFramework.xml
+E:\系统源码\VS2013\stand\stand.Bll\obj\Debug\stand.Bll.dll
+E:\系统源码\VS2013\stand\stand.Bll\obj\Debug\stand.Bll.pdb

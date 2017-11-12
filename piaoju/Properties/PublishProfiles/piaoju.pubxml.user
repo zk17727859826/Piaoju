@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\发布的网站\piaoju</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ChnCharInfo.dll">
+      <publishTime>03/24/2008 17:12:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/10/2016 21:20:44</publishTime>
+    </File>
+    <File Include="bin/jiax.Model.dll">
+      <publishTime>11/12/2017 14:35:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/31/2016 21:14:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>08/31/2016 21:14:43</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/31/2016 21:14:33</publishTime>
+    </File>
+    <File Include="bin/piaoju.Bll.dll">
+      <publishTime>11/12/2017 14:35:57</publishTime>
+    </File>
+    <File Include="bin/piaoju.Dal.dll">
+      <publishTime>11/12/2017 14:35:56</publishTime>
+    </File>
+    <File Include="bin/piaoju.dll">
+      <publishTime>11/12/2017 14:35:59</publishTime>
+    </File>
+    <File Include="bin/piaoju.Model.dll">
+      <publishTime>11/12/2017 14:35:53</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/31/2016 21:14:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/31/2016 21:14:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/31/2016 21:14:45</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/31/2016 21:14:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/31/2016 21:14:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/31/2016 21:14:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/31/2016 21:14:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/31/2016 21:14:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/31/2016 21:14:41</publishTime>
+    </File>
+    <File Include="bin/tg.Helper.dll">
+      <publishTime>11/12/2017 14:35:53</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>01/30/2013 17:01:15</publishTime>
+    </File>
+    <File Include="bin/zh-CN/ChnCharInfo.resources.dll">
+      <publishTime>02/18/2008 11:29:54</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/07/2017 21:44:27</publishTime>
+    </File>
+    <File Include="jatoolsPrinter.cab">
+      <publishTime>02/12/2017 21:16:11</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/31/2016 21:14:47</publishTime>
+    </File>
+    <File Include="PrintActivex.exe">
+      <publishTime>02/20/2017 22:48:41</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table-locale-all.js">
+      <publishTime>10/25/2016 22:47:56</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table-locale-all.min.js">
+      <publishTime>10/25/2016 22:47:55</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.js">
+      <publishTime>10/25/2016 22:48:33</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table-zh-CN.min.js">
+      <publishTime>10/25/2016 22:48:33</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table.css">
+      <publishTime>10/25/2016 22:47:56</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table.js">
+      <publishTime>10/25/2016 22:47:56</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table.min.css">
+      <publishTime>10/25/2016 22:47:56</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/bootstrap.table/bootstrap-table.min.js">
+      <publishTime>10/25/2016 22:47:56</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap-theme.css">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap.css">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap.css.map">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap.index.css">
+      <publishTime>10/15/2016 20:01:03</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/css/bootstrap.min.css">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/js/bootstrap.js">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/js/bootstrap.min.js">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/bootstrap/js/npm.js">
+      <publishTime>08/31/2016 21:37:49</publishTime>
+    </File>
+    <File Include="Resource/css/login.css">
+      <publishTime>08/31/2016 21:50:02</publishTime>
+    </File>
+    <File Include="Resource/Images/bg-body.gif">
+      <publishTime>10/15/2016 20:41:57</publishTime>
+    </File>
+    <File Include="Resource/Images/bg-side.gif">
+      <publishTime>10/15/2016 20:41:57</publishTime>
+    </File>
+    <File Include="Resource/Images/bg.gif">
+      <publishTime>10/15/2016 20:41:57</publishTime>
+    </File>
+    <File Include="Resource/Images/slid-current-arrow.gif">
+      <publishTime>10/15/2016 20:41:57</publishTime>
+    </File>
+    <File Include="Resource/javascript/accept.js">
+      <publishTime>02/12/2017 22:05:36</publishTime>
+    </File>
+    <File Include="Resource/javascript/core.js">
+      <publishTime>02/15/2017 22:06:25</publishTime>
+    </File>
+    <File Include="Resource/javascript/czygl.js">
+      <publishTime>02/15/2017 22:05:26</publishTime>
+    </File>
+    <File Include="Resource/javascript/jatoolsPrinter.js">
+      <publishTime>02/15/2017 21:45:30</publishTime>
+    </File>
+    <File Include="Resource/javascript/jquery-migrate-1.2.1.min.js">
+      <publishTime>02/25/2017 09:20:39</publishTime>
+    </File>
+    <File Include="Resource/javascript/jquery.jqprint-0.3.js">
+      <publishTime>02/25/2017 09:09:06</publishTime>
+    </File>
+    <File Include="Resource/javascript/jquery.min.js">
+      <publishTime>08/31/2016 21:40:54</publishTime>
+    </File>
+    <File Include="Resource/javascript/log.js">
+      <publishTime>02/11/2017 22:35:15</publishTime>
+    </File>
+    <File Include="Resource/javascript/login.js">
+      <publishTime>02/07/2017 21:29:59</publishTime>
+    </File>
+    <File Include="Resource/javascript/menu.js">
+      <publishTime>10/26/2016 22:44:34</publishTime>
+    </File>
+    <File Include="Resource/javascript/param.js">
+      <publishTime>10/16/2016 19:15:07</publishTime>
+    </File>
+    <File Include="Resource/javascript/password.js">
+      <publishTime>10/16/2016 12:07:08</publishTime>
+    </File>
+    <File Include="Resource/javascript/paylist.js">
+      <publishTime>02/15/2017 23:04:27</publishTime>
+    </File>
+    <File Include="Resource/javascript/role.js">
+      <publishTime>10/16/2016 16:05:52</publishTime>
+    </File>
+    <File Include="Resource/javascript/subparam.js">
+      <publishTime>10/16/2016 22:41:35</publishTime>
+    </File>
+    <File Include="Resource/javascript/user.js">
+      <publishTime>02/07/2017 22:29:03</publishTime>
+    </File>
+    <File Include="Resource/javascript/zd.js">
+      <publishTime>02/12/2017 17:19:02</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/calendar.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/lang/en.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/lang/zh-cn.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/lang/zh-tw.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/datePicker.gif">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/default/datepicker.css">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/default/img.gif">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/WdatePicker.css">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/whyGreen/bg.jpg">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/whyGreen/datepicker.css">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/skin/whyGreen/img.gif">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/WdatePicker.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/lang/en.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/lang/zh-cn.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/lang/zh-tw.js">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/readme.txt">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/datePicker.gif">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/default/datepicker.css">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/default/img.gif">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/WdatePicker.css">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/whyGreen/bg.jpg">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/whyGreen/datepicker.css">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/My97DatePicker/开发包/skin/whyGreen/img.gif">
+      <publishTime>10/21/2016 20:28:57</publishTime>
+    </File>
+    <File Include="Resource/printfr/piaoju.fr3">
+      <publishTime>02/20/2017 21:15:42</publishTime>
+    </File>
+    <File Include="Resource/upload/bg.png">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/expressInstall.swf">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/icons.png">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/image.png">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/progress.png">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/success.png">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/upload.css">
+      <publishTime>10/23/2016 20:42:25</publishTime>
+    </File>
+    <File Include="Resource/upload/upload.js">
+      <publishTime>10/23/2016 21:07:36</publishTime>
+    </File>
+    <File Include="Resource/upload/Uploader.swf">
+      <publishTime>10/23/2016 20:42:26</publishTime>
+    </File>
+    <File Include="Resource/upload/webuploader.css">
+      <publishTime>10/23/2016 20:42:26</publishTime>
+    </File>
+    <File Include="Resource/upload/webuploader.js">
+      <publishTime>10/23/2016 20:42:26</publishTime>
+    </File>
+    <File Include="Resource/upload/webuploader.nolog.min.js">
+      <publishTime>10/23/2016 20:42:26</publishTime>
+    </File>
+    <File Include="Views/Affice/accept.cshtml">
+      <publishTime>11/12/2017 14:34:50</publishTime>
+    </File>
+    <File Include="Views/Affice/acceptlist.cshtml">
+      <publishTime>02/15/2017 22:06:45</publishTime>
+    </File>
+    <File Include="Views/Affice/AddZidian1.cshtml">
+      <publishTime>02/12/2017 15:43:31</publishTime>
+    </File>
+    <File Include="Views/Affice/Detail.cshtml">
+      <publishTime>10/05/2017 16:33:17</publishTime>
+    </File>
+    <File Include="Views/Affice/Log.cshtml">
+      <publishTime>02/11/2017 22:37:46</publishTime>
+    </File>
+    <File Include="Views/Affice/paylist.cshtml">
+      <publishTime>02/15/2017 23:06:20</publishTime>
+    </File>
+    <File Include="Views/Affice/XueyuanDetails.cshtml">
+      <publishTime>02/11/2017 21:26:00</publishTime>
+    </File>
+    <File Include="Views/Affice/xueyuanlist.cshtml">
+      <publishTime>02/11/2017 20:39:07</publishTime>
+    </File>
+    <File Include="Views/Affice/Zidian.cshtml">
+      <publishTime>02/11/2017 23:02:05</publishTime>
+    </File>
+    <File Include="Views/Affice/Zidian1.cshtml">
+      <publishTime>02/12/2017 16:33:08</publishTime>
+    </File>
+    <File Include="Views/Common/Baomd.cshtml">
+      <publishTime>02/11/2017 22:02:38</publishTime>
+    </File>
+    <File Include="Views/Common/Operator.cshtml">
+      <publishTime>02/11/2017 22:06:15</publishTime>
+    </File>
+    <File Include="Views/Common/Paytype.cshtml">
+      <publishTime>02/11/2017 13:52:57</publishTime>
+    </File>
+    <File Include="Views/Index/Index.cshtml">
+      <publishTime>02/07/2017 20:59:27</publishTime>
+    </File>
+    <File Include="Views/Index/Password.cshtml">
+      <publishTime>02/07/2017 21:02:34</publishTime>
+    </File>
+    <File Include="Views/Index/Users.cshtml">
+      <publishTime>02/07/2017 22:27:52</publishTime>
+    </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>02/18/2017 17:27:05</publishTime>
+    </File>
+    <File Include="Views/Login/Logout.cshtml">
+      <publishTime>10/15/2016 19:46:18</publishTime>
+    </File>
+    <File Include="Views/Share/_Index.cshtml">
+      <publishTime>02/15/2017 22:55:22</publishTime>
+    </File>
+    <File Include="Views/Share/_Layout.cshtml">
+      <publishTime>02/15/2017 23:01:07</publishTime>
+    </File>
+    <File Include="Views/Share/_System.cshtml">
+      <publishTime>02/19/2017 22:38:13</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/31/2016 21:13:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/04/2017 21:04:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

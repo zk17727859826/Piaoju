@@ -1,0 +1,8 @@
+E:\系统源码\VS2013\stand\stand.Model\bin\Debug\stand.Model.dll.config
+E:\系统源码\VS2013\stand\stand.Model\bin\Debug\stand.Model.dll
+E:\系统源码\VS2013\stand\stand.Model\bin\Debug\stand.Model.pdb
+E:\系统源码\VS2013\stand\stand.Model\bin\Debug\EntityFramework.dll
+E:\系统源码\VS2013\stand\stand.Model\bin\Debug\EntityFramework.xml
+E:\系统源码\VS2013\stand\stand.Model\obj\Debug\stand.Model.dll
+E:\系统源码\VS2013\stand\stand.Model\obj\Debug\stand.Model.pdb
+E:\系统源码\VS2013\stand\stand.Model\obj\Debug\stand.Model.csprojResolveAssemblyReference.cache

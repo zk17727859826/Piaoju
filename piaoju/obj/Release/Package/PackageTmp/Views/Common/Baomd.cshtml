@@ -1,0 +1,12 @@
+﻿@model IEnumerable<jiax.Model.Tzidian>
+
+<select id="@ViewBag.ID" name="@ViewBag.Name" class="@ViewBag.ClassName">
+    @if (Model != null)
+    {
+        <option value="">---</option>
+        foreach (var item in Model)
+        {
+            <option value="@item.Zidxh">@item.Shuom</option>
+        }
+    }
+</select>

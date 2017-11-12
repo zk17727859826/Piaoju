@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jiax_carfinanceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="syslog">
+    <Key>
+      <PropertyRef Name="logno" />
+    </Key>
+    <Property Name="logno" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="logtype" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="logdate" Type="date" Nullable="false" />
+    <Property Name="logmemo" Type="varchar" MaxLength="1000" />
+    <Property Name="logip" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="sysmenu">
+    <Key>
+      <PropertyRef Name="menuno" />
+    </Key>
+    <Property Name="menuno" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="menuname" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="isvalid" Type="varchar" MaxLength="1" />
+    <Property Name="menuurl" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sysparam">
+    <Key>
+      <PropertyRef Name="paramno" />
+      <PropertyRef Name="paramname" />
+    </Key>
+    <Property Name="paramno" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="paramname" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysparam_children">
+    <Key>
+      <PropertyRef Name="paramno" />
+      <PropertyRef Name="subno" />
+    </Key>
+    <Property Name="paramno" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="subno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="subname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="seq" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="syspower">
+    <Key>
+      <PropertyRef Name="powerno" />
+    </Key>
+    <Property Name="powerno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="powername" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="memo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysrole">
+    <Key>
+      <PropertyRef Name="roleno" />
+    </Key>
+    <Property Name="roleno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="rolename" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="memo" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ynfix" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sysrole_power">
+    <Key>
+      <PropertyRef Name="roleno" />
+      <PropertyRef Name="powerno" />
+    </Key>
+    <Property Name="roleno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="powerno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="createdate" Type="date" Nullable="false" />
+    <Property Name="creater" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysuser">
+    <Key>
+      <PropertyRef Name="userno" />
+    </Key>
+    <Property Name="userno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="xingbie" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="shenfhm" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="shoujhm" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="isadmin" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="creater" Type="varchar" MaxLength="10" />
+    <Property Name="createdate" Type="date" />
+    <Property Name="editer" Type="varchar" MaxLength="10" />
+    <Property Name="editdate" Type="date" />
+  </EntityType>
+  <EntityType Name="sysuser_power">
+    <Key>
+      <PropertyRef Name="userno" />
+      <PropertyRef Name="powerno" />
+    </Key>
+    <Property Name="userno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="powerno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="creater" Type="varchar" MaxLength="10" />
+    <Property Name="createdate" Type="date" />
+  </EntityType>
+  <EntityType Name="sysuser_role">
+    <Key>
+      <PropertyRef Name="userno" />
+      <PropertyRef Name="roleno" />
+    </Key>
+    <Property Name="userno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="roleno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="creater" Type="varchar" MaxLength="10" />
+    <Property Name="createdate" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_bus">
+    <Key>
+      <PropertyRef Name="busno" />
+    </Key>
+    <Property Name="busno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="busname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="busower" Type="varchar" MaxLength="50" />
+    <Property Name="creater" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="createdate" Type="date" Nullable="false" />
+    <Property Name="editer" Type="varchar" MaxLength="10" />
+    <Property Name="editdate" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_fee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="busno" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="kemu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="kemuname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="driver" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fee" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="pic" Type="varchar" MaxLength="100" />
+    <Property Name="creater" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="createdate" Type="date" Nullable="false" />
+    <Property Name="feedate" Type="date" Nullable="false" />
+    <Property Name="editer" Type="varchar" MaxLength="10" />
+    <Property Name="editdate" Type="date" />
+  </EntityType>
+  <Association Name="FK_sysrole_power_sysrole">
+    <End Role="sysrole" Type="Self.sysrole" Multiplicity="1" />
+    <End Role="sysrole_power" Type="Self.sysrole_power" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysrole">
+        <PropertyRef Name="roleno" />
+      </Principal>
+      <Dependent Role="sysrole_power">
+        <PropertyRef Name="roleno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sysuser_power_sysuser">
+    <End Role="sysuser" Type="Self.sysuser" Multiplicity="1" />
+    <End Role="sysuser_power" Type="Self.sysuser_power" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysuser">
+        <PropertyRef Name="userno" />
+      </Principal>
+      <Dependent Role="sysuser_power">
+        <PropertyRef Name="userno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sysuser_role_sysrole">
+    <End Role="sysrole" Type="Self.sysrole" Multiplicity="1" />
+    <End Role="sysuser_role" Type="Self.sysuser_role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysrole">
+        <PropertyRef Name="roleno" />
+      </Principal>
+      <Dependent Role="sysuser_role">
+        <PropertyRef Name="roleno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sysuser_role_sysuser">
+    <End Role="sysuser" Type="Self.sysuser" Multiplicity="1" />
+    <End Role="sysuser_role" Type="Self.sysuser_role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sysuser">
+        <PropertyRef Name="userno" />
+      </Principal>
+      <Dependent Role="sysuser_role">
+        <PropertyRef Name="userno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="jiax_carfinanceModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="syslog" EntityType="Self.syslog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysmenu" EntityType="Self.sysmenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysparam" EntityType="Self.sysparam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysparam_children" EntityType="Self.sysparam_children" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="syspower" EntityType="Self.syspower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysrole" EntityType="Self.sysrole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysrole_power" EntityType="Self.sysrole_power" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysuser" EntityType="Self.sysuser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysuser_power" EntityType="Self.sysuser_power" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysuser_role" EntityType="Self.sysuser_role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_bus" EntityType="Self.tbl_bus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_fee" EntityType="Self.tbl_fee" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_sysrole_power_sysrole" Association="Self.FK_sysrole_power_sysrole">
+      <End Role="sysrole" EntitySet="sysrole" />
+      <End Role="sysrole_power" EntitySet="sysrole_power" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sysuser_power_sysuser" Association="Self.FK_sysuser_power_sysuser">
+      <End Role="sysuser" EntitySet="sysuser" />
+      <End Role="sysuser_power" EntitySet="sysuser_power" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sysuser_role_sysrole" Association="Self.FK_sysuser_role_sysrole">
+      <End Role="sysrole" EntitySet="sysrole" />
+      <End Role="sysuser_role" EntitySet="sysuser_role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sysuser_role_sysuser" Association="Self.FK_sysuser_role_sysuser">
+      <End Role="sysuser" EntitySet="sysuser" />
+      <End Role="sysuser_role" EntitySet="sysuser_role" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
